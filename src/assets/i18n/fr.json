@@ -1,0 +1,218 @@
+{
+  "Header.Item1": "À propos de moi",
+  "Header.Item2": "Expérience",
+  "Header.Item3": "Projets",
+  "Header.Item4": "Contact",
+  "Header.cvBtn": "CV",
+  "Header.cvName": "CV_Jose_Hernandez_French.pdf",
+
+  "Banner.Pretitle": "Bonjour ! Je m'appelle",
+  "Banner.Description": "J'ai <span class='underline'>3 ans d'expérience</span> dans le développement de microservices, d'APIs RESTful, d'applications web, de traitement par lots et de solutions technologiques axées sur le web. Je suis engagé dans l'écriture et la restructuration de code propre, réutilisable et évolutif avec <span class='underline'>Spring Boot</span> et <span class='underline'>Angular</span>, tout en suivant les meilleures pratiques et les normes de développement.",
+  "Banner.ActionBtn": "Dites bonjour",
+
+  "AboutMe.Title": "À propos de moi",
+  "AboutMe.Paragraphs": [
+    "Avec <span class='underline'>3 ans d'expérience</span> dans le développement logiciel, j'ai occupé divers rôles tels que <span class='underline'>développeur Full-Stack</span>, <span class='underline'>spécialiste Backend</span>, et <span class='underline'>ingénieur Front-End</span>. Ma passion réside dans la création de solutions robustes, évolutives et efficaces qui font une différence tangible.",
+    "Je me distingue par le développement et l'amélioration des systèmes, la normalisation des pratiques de codage et la fourniture d'une valeur continue dans chaque projet auquel je participe. Que ce soit pour améliorer les performances, garantir la qualité du code ou résoudre des problèmes complexes, je m'engage vers l'excellence.",
+    "En plus de mon travail professionnel, j'apprécie de développer des projets personnels allant des outils pratiques aux idées expérimentales. Cela me permet d'améliorer constamment mes compétences et d'explorer de nouvelles technologies.",
+    "Parmi les technologies dans lesquelles j'excelle figurent (mais ne se limitent pas à) : <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, et <span class='underline'>l'architecture microservices</span>."
+  ],
+
+  "Experience.Title": "Expérience",
+  "Experience.Jobs": [
+    {
+      "Tab": "Développeur Full-Stack",
+      "Title": "Développeur Full-Stack",
+      "Date": "Octobre 2021 - Mai 2022",
+      "Description": [
+        "Développement et maintenance d'applications web, d'APIs RESTful et de microservices avec Spring Boot et Angular.",
+        "Amélioration des performances système par la mise en œuvre du caching, du traitement asynchrone et de l'indexation des bases de données.",
+        "Mise en œuvre de mesures de sécurité pour protéger l'intégrité des données et la confidentialité des utilisateurs.",
+        "Utilisation de pipelines d'intégration continue et de déploiement continu (CI/CD) pour automatiser les processus de test et de déploiement.",
+        "Collaboration avec des équipes interfonctionnelles pour fournir des solutions logicielles de haute qualité.",
+        "Participation à des revues de code, du pair programming et des sessions de partage de connaissances pour améliorer la performance de l'équipe."
+      ]
+    },
+    {
+      "Tab": "Freelance",
+      "Title": "Freelance",
+      "Date": "Mai 2022 - Présent",
+      "Description": [
+        "Implémentation continue des améliorations sur les systèmes front-end et back-end, en mettant l'accent sur les performances et la qualité du code.",
+        "Développement de plateformes évolutives et robustes en utilisant Spring Boot et Angular, en appliquant la programmation fonctionnelle, réactive et orientée objet.",
+        "Automatisation des processus à travers des structures de données efficaces, amélioration de la productivité des flux de travail.",
+        "Collaboration avec les clients pour comprendre leurs besoins et fournir des solutions personnalisées.",
+        "Intégration des APIs et services externes pour étendre les capacités de la plateforme.",
+        "Assurance de l'application des meilleures pratiques en développement logiciel, y compris le contrôle de version, les tests et le déploiement."
+      ]
+    }
+  ],
+
+  "FeatureProjects.Title": "Mes projets",
+  "FeatureProjects.Label": "Projet en vedette",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Gisselle",
+      "Description": "Application web de gestion interne d'entreprise couvrant les départements des ventes, des recouvrements, et de suivi, un projet complexe avec plusieurs fonctionnalités, développé avec <span class='underline'>Angular</span> et <span class='underline'>Laravel</span>. Fonctionne avec <span class='underline'>websockets</span>, <span class='underline'>calendriers</span>, <span class='underline'>Tâches Laravel</span>, intégration avec WordPress, Zadarma, LiveConnect, etc.",
+      "imgs": [
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 1009582.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115514.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115702.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115829.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 1009582.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Emelteciot",
+      "Description": "Application de surveillance des données, développée avec <span class='underline'>Angular</span> et <span class='underline'>Laravel</span>. Utilisation de la bibliothèque <span class='underline'>chart.js</span>.",
+      "imgs": [
+        "assets/images/proyex2/Captura de pantalla 2024-07-28 102852.png",
+        "assets/images/proyex2/849c117f-bed9-4406-9c13-c8669f655acc.png",
+        "assets/images/proyex2/62cdf90c-6196-4a6e-b639-8919cda4f749.png",
+        "assets/images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923.png",
+        "assets/images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923 (1).png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Vas Aviation",
+      "Description": "Application pour suivre les commandes de carburant pour avions. Comprend un <span class='underline'>module email</span>, des <span class='underline'>notifications en temps réel</span>, <span class='underline'>traitement de fichiers CSV pour l'importation de données</span>, et des <span class='underline'>devis</span>. Développé avec <span class='underline'>Angular</span> et <span class='underline'>Laravel</span>.",
+      "imgs": [
+        "assets/images/vasaviation/capture0.png",
+        "assets/images/vasaviation/capture1.png",
+        "assets/images/vasaviation/capture2.png",
+        "assets/images/vasaviation/capture3.png",
+        "assets/images/vasaviation/capture4.png",
+        "assets/images/vasaviation/capture5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "GlobalJobs",
+      "Description": "Plateforme éducative développée avec WordPress. Conception entièrement personnalisée, avec des plugins développés à partir de zéro. Comprend un module de paiement personnalisé, une salle de formation en ligne, et un tableau de suivi des cours.",
+      "imgs": [
+        "assets/images/globaljobs/capture1.png",
+        "assets/images/globaljobs/capture2.png",
+        "assets/images/globaljobs/capture3.png",
+        "assets/images/globaljobs/capture4.png",
+        "assets/images/globaljobs/capture5.png",
+        "assets/images/globaljobs/capture6.png"
+      ],
+      "Technologies": ["WordPress", "WordPress Codex", "PHP", "MySQL"]
+    },
+    {
+      "Title": "GlobalJobs",
+      "Description": "Plateforme de commerce électronique pour produits technologiques. Développée avec WordPress, avec un système d'expédition pour les produits. Comprend des rapports de ventes via une programmation personnalisée.",
+      "imgs": [
+        "assets/images/mbelectronics/capture0.png",
+        "assets/images/mbelectronics/capture1.png",
+        "assets/images/mbelectronics/capture2.png"
+      ],
+      "Technologies": ["WordPress", "Elementor", "Woocommerce", "WordPress Codex", "PHP", "MySQL"]
+    },
+    {
+      "Title": "Agrourbana",
+      "Description": "Application de surveillance développée à partir de zéro avec un module d'authentification, des <span class='underline'>graphes configurables</span>, des <span class='underline'>alertes configurables</span>, et <span class='underline'>gestion des utilisateurs</span>. Contient également de la logique pour des modèles interactifs pour la configuration des paramètres.",
+      "imgs": [
+        "assets/images/agrourbana/agrourbana1.png",
+        "assets/images/agrourbana/agrourbana2.png",
+        "assets/images/agrourbana/agrourbana3.png",
+        "assets/images/agrourbana/agrourbana4.png",
+        "assets/images/agrourbana/agrourbana5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Tu Super Plan",
+      "Description": "Plateforme d'estimation de plans de santé avec un moteur de recherche avancé. Les plans sont affichés en fonction de l'âge de l'utilisateur, de ses revenus mensuels et de son emplacement. Comprend un <span class='underline'>chat en direct</span>, un <span class='underline'>formulaire de contact</span>, un <span class='underline'>système de notifications via WhatsApp et e-mail</span>, une <span class='underline'>authentification</span>, et <span class='underline'>gestion des informations via le rôle de l'administrateur</span>.",
+      "imgs": [
+        "assets/images/tusuperplan/tusuperplan1.png",
+        "assets/images/tusuperplan/tusuperplan2.png",
+        "assets/images/tusuperplan/tusuperplan3.png",
+        "assets/images/tusuperplan/tusuperplan4.png",
+        "assets/images/tusuperplan/tusuperplan5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Proyexiot",
+      "Description": "Plateforme de surveillance de données pour puits d'eau, bateaux, et diverses installations développée à partir de zéro avec un module d'authentification, des <span class='underline'>graphes configurables</span>, des <span class='underline'>alertes configurables</span>, <span class='underline'>gestion des utilisateurs</span>, et <span class='underline'>géolocalisation avec openlayers</span>. Contient également de la logique pour des modèles interactifs pour la configuration des paramètres.",
+      "imgs": [
+        "assets/images/proyex/proyex1.png",
+        "assets/images/proyex/proyex2.png",
+        "assets/images/proyex/proyex3.png",
+        "assets/images/proyex/proyex4.png",
+        "assets/images/proyex/proyex5.png",
+        "assets/images/proyex/proyex6.png",
+        "assets/images/proyex/proyex7.png",
+        "assets/images/proyex/proyex8.png",
+        "assets/images/proyex/proyex9.png",
+        "assets/images/proyex/proyex10.png",
+        "assets/images/proyex/proyex11.png",
+        "assets/images/proyex/proyex12.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    }
+  ],
+
+  "OtherProjects.Title": "Autres projets",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Appliance",
+      "Description": "J'ai créé une application pour gérer et surveiller les appareils et les systèmes matériels. Ce projet a inclus l'intégration avec des API externes et des outils de visualisation des données pour suivre les performances des appareils.",
+      "imgs": ["assets/images/hands-game.png"],
+      "ghLink": "https://github.com/Amineifakkir/Projet_appliance",
+      "Technologies": ["Angular", "SpringBoot", "Keycloak", "Angular Animate"]
+    },
+    {
+      "Title": "RE Front OffreOnline",
+      "Description": "Projet de front-end conçu pour améliorer l'expérience utilisateur du système de gestion des offres en ligne. L'interface a été développée en utilisant Angular, en mettant l'accent sur la réactivité et la facilité de navigation.",
+      "imgs": ["assets/images/countries-viewer.png"],
+      "Technologies": ["Angular", "RxJS", "SpringBoot", "API", "GIT", "SpringSecurity"]
+    },
+    {
+      "Title": "DPPI-GC",
+      "Description": "J'ai développé une application pour la coordination générale et la gestion des projets. J'ai utilisé Spring Boot et Angular pour créer un système permettant une collaboration fluide entre les équipes et le suivi des projets en temps réel.",
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "LDAP"]
+    },
+    {
+      "Title": "DPPI-FON",
+      "Description": "J'ai travaillé sur une plateforme axée sur les opérations fonctionnelles et la gestion. Cela a impliqué le développement du back-end avec Spring Boot et du front-end avec Angular, pour assurer un flux de données fluide et une intégration fonctionnelle.",
+      "imgs": ["assets/images/dppi-fon.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "LDAP"]
+    },
+    {
+      "Title": "SDR",
+      "Description": "J'ai construit une solution soutenant les équipes de vente et le développement commercial en automatisant les processus et en fournissant des analyses en temps réel. Réalisé avec Spring Boot et Angular pour le développement backend et frontend.",
+      "imgs": ["assets/images/sdr.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "ElasticSearch", "Kibana", "MySQL"]
+    },
+    {
+      "Title": "CRM System",
+      "Description": "J'ai développé un système CRM avec des fonctionnalités telles que la gestion des clients, le suivi des clients et la génération de rapports. Construit avec Spring Boot et Angular, il fournit aux entreprises un moyen efficace de gérer les interactions avec les clients.",
+      "imgs": ["assets/images/crm.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "Bootstrap"]
+    }
+  ],
+
+  "Contact.Pretitle": "Et maintenant ?",
+  "Contact.Title": "Dites bonjour !",
+  "Contact.Content": "Je serais heureux de vous entendre si vous souhaitez discuter de nouvelles opportunités. Écrivez-moi et je vous répondrai dès que je verrai votre message.",
+  "Contact.Btn": "Contactez-moi",
+
+  "ContactForm": {
+    "Title": "Contact",
+    "Description": "Si vous avez des questions ou souhaitez simplement dire bonjour, n'hésitez pas à me contacter.",
+    "Fields": {
+      "Name": "Nom",
+      "Email": "E-mail",
+      "Message": "Message"
+    },
+    "SubmitBtn": "Envoyer"
+  }
+}

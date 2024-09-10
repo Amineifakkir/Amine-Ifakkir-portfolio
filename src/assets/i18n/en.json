@@ -18,84 +18,38 @@
     "Some of the technologies I specialize in include (but are not limited to): <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, and <span class='underline'>Microservices Architecture</span>."
 ],
 
+
   "Experience.Title": "Experience",
   "Experience.Jobs": [
+   
     {
-      "Tab": "Global",
-      "Title": "Fullstack Developer",
-      "Date": "May 2023",
+      "Tab": "Full-Stack Developer",
+      "Title": "Full-Stack Developer",
+      "Date": "Oct 2021 - May 2022",
       "Description": [
-        "Leader in technical decision making",
-        "Hiring technical talent for the company",
-        "Team leader of the technology department",
-        "Creation and maintenance of an internal process management platform for course sales",
-        "Programming custom functions and plugins for customizing a WordPress platform",
-        "Implementation of continuous integration and daily backups.",
-        "Planning and reporting meetings."
-      ]
-    },
-    {
-      "Tab": "Proyex",
-      "Title": "Fullstack Developer",
-      "Date": "December 2019 - May 2023",
-      "Description": [
-        "Creation and maintenance of a monitoring platform with charts in WordPress.",
-        "Functional programming in templates and plugins to add necessary monitoring features.",
-        "Implementation of continuous integration and daily backups.",
-        "Creation and maintenance of a second Monitoring Platform made with Angular, Angular Material, Laravel, MySQL, RxJS, Sass with configurable charts, alarm systems, and user management and general configuration settings.",
-        "Planning and reporting meetings."
-      ]
+    "Developed and maintained web applications, RESTful APIs, and microservices using Spring Boot and Angular.",
+    "Optimized system performance by implementing caching, asynchronous processing, and database indexing.",
+    "Implemented security measures to protect data integrity and user privacy.",
+    "Utilized continuous integration and continuous deployment (CI/CD) pipelines to automate testing and deployment processes.",
+    "Collaborated with cross-functional teams to deliver high-quality software solutions.",
+    "Participated in code reviews, pair programming, and knowledge sharing sessions to enhance team performance."
+  ]
     },
     {
       "Tab": "Freelancer",
       "Title": "Freelancer",
-      "Date": "May 2016 - Present",
+      "Date": "May 2022 - Present",
       "Description": [
-        "Continuous improvements implementation, working on frontend and backend.",
-        "Creation of platforms with Angular, Laravel, WordPress programmed with functional, reactive, and object-oriented programming paradigms.",
-        "Process automation with data structures.",
-        "Template designs with SASS, Bootstrap, Materialize, Bulma, etc."
-      ]
-    },
-    {
-      "Tab": "Moebius",
-      "Title": "Fullstack Developer",
-      "Date": "July 2017 - October 2018",
-      "Description": [
-        "Leading a team of 4 people in the development of a tourism data management platform made in Angular, Laravel, and MySQL.",
-        "Implementation of CI/CD in Azure. Refactoring and optimizing application load times.",
-        "Coding API requests with RxJS.",
-        "Creating modules with complex reactive forms.",
-        "Writing weekly reports about goals and plans."
-      ]
-    },
-    {
-      "Tab": "TechLatam",
-      "Title": "Frontend Developer",
-      "Date": "February 2016 - May 2017",
-      "Description": [
-        "Creating WordPress templates with ACF, functional programming in JavaScript/jQuery, styles in SASS.",
-        "Integrating design and load time improvements for templates.",
-        "Effective communication with the design team, working with Avocode/Figma."
-      ]
-    },
-    {
-      "Tab": "CANTV",
-      "Title": "Systems Analyst",
-      "Date": "November 2015 - December 2016",
-      "Description": [
-        "Programming new functionalities for an existing employee management platform made with Angular and ExpressJS.",
-        "Refactoring old code. Ensuring compatibility of each dependency with each update, including regular Angular updates."
-      ]
-    },
-    {
-      "Tab": "IEP",
-      "Title": "English Teacher",
-      "Date": "January 2015 - July 2015",
-      "Description": [
-        "Teaching basic English to a student body of over 200 students."
-      ]
+    "Implementing continuous improvements across both frontend and backend systems, focusing on performance optimization and code quality.",
+    "Developing scalable and robust platforms using Spring Boot and Angular, utilizing functional, reactive, and object-oriented programming paradigms.",
+    "Automating processes through efficient data structures and enhancing workflow productivity.",
+    "Collaborating with clients to understand their requirements and deliver customized solutions.",
+    "Integrating third-party APIs and services to expand platform capabilities.",
+    "Ensuring the use of best practices in software development, including version control, testing, and deployment."
+  ]
     }
+  
+    
   ],
 
   "FeatureProjects.Title": "My Projects",
@@ -209,48 +163,44 @@
   "OtherProjects.Title": "More Projects",
   "OtherProjects.Projects": [
     {
-      "Title": "Hands Game",
-      "Description": "Extended rock-paper-scissors game. A personal project developed in Angular where you play randomly against the machine. It features the use of services, interfaces, and components.",
+      "Title": "Appliance",
+      "Description": "Created an application for managing and monitoring appliances and hardware systems. This project included integration with third-party APIs and data visualization tools for tracking appliance performance.",
       "imgs": ["assets/images/hands-game.png"],
-      "ghLink": "https://github.com/andresjosehr/hands-game",
-      "demoLink": "https://projects.andresjosehr.com/hands-game",
-      "Technologies": ["Angular", "CSS GRID", "SASS", "Angular animations"]
+      "ghLink": "https://github.com/Amineifakkir/Projet_appliance",
+      "Technologies": ["Angular", "SpringBoot", "Keyckloak", "Angular animations"]
     },
     {
-      "Title": "Countries Viewer",
-      "Description": "Interface that consumes a countries API where you can view a list of countries, see details of each country, filter by name and region. It also has a dark mode to switch between dark and light themes.",
+      "Title": "RE Front OffreOnline",
+      "Description": "A front-end project designed to enhance the user experience for an online offer management system. Developed the interface using Angular, focusing on responsiveness and user-friendly navigation.",
       "imgs": ["assets/images/countries-viewer.png"],
-      "ghLink": "https://github.com/andresjosehr/countries-viewer",
-      "demoLink": "https://projects.andresjosehr.com/countries-viewer",
-      "Technologies": ["Angular", "RxJS", "SASS", "API"]
+      "Technologies": ["Angular", "RxJS", "SpringBoot", "API", "GIT", "SpringSecurity"] 
     },
     {
-      "Title": "Four Card Feature Section",
-      "Description": "A single page with a minimalist design listing 4 features in 4 cards. Entry animations are used with Angular animations.",
-      "ghLink": "https://github.com/andresjosehr/four-card-feature-section",
-      "demoLink": "https://projects.andresjosehr.com/four-card-feature-section",
-      "Technologies": ["Angular", "SASS", "CSS GRID"]
+      "Title": "DPPI-GC",
+      "Description": "Developed an application for general coordination and project management. Utilized Spring Boot and Angular to create a system that allows seamless collaboration between teams and real-time project tracking.",
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity","LDAP"]
+        },
+    {
+      "Title": "DPPI-FON",
+      "Description": "Worked on a platform focused on functional operations and management. Involved backend development with Spring Boot and frontend with Angular, ensuring smooth data flow and functional integration.",
+      "imgs": ["assets/images/dppi-fon.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity","LDAP"]
     },
     {
-      "Title": "Social Proof Section",
-      "Description": "Personal project of a page designed from a design made in Figma. Angular was used for development along with SASS and CSS GRID.",
-      "ghLink": "https://github.com/andresjosehr/social-proof-section",
-      "demoLink": "https://projects.andresjosehr.com/social-proof-section",
-      "Technologies": ["Angular", "CSS GRID", "GIT"]
+      "Title": "SDR",
+      "Description": "Built a solution supporting sales and business development teams by automating processes and providing real-time analytics. Implemented using Spring Boot and Angular for both backend and frontend development.",
+      "imgs": ["assets/images/sdr.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "ElasticSearch", "Kibana", "MySQL"]
     },
     {
-      "Title": "FAQ Accordion Card",
-      "Description": "Frequently asked questions accordion with logic and animations made in Angular.",
-      "ghLink": "https://github.com/andresjosehr/faq-accordion",
-      "demoLink": "https://projects.andresjosehr.com/faq-accordion",
-      "Technologies": ["Angular", "CSS GRID", "Angular animations"]
-    },
-    {
-      "Title": "Profile Card",
-      "Description": "Simple design of a page featuring a profile card with basic information of a person.",
-      "ghLink": "https://github.com/andresjosehr/profile-card-component",
-      "demoLink": "https://projects.andresjosehr.com/profile-card-component",
-      "Technologies": ["Angular", "SASS", "GIT"]
+      "Title": "CRM System",
+      "Description": "Developed a CRM system with features such as lead management, customer tracking, and reporting. Built with Spring Boot and Angular, the system provides businesses with an efficient way to manage customer interactions.",
+      "imgs": ["assets/images/crm.png"],
+      "ghLink": "",
+      "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "Bootstrap"]
     }
   ],
 

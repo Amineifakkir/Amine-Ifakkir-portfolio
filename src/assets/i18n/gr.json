@@ -1,0 +1,148 @@
+{
+  "Header.Item1": "Über Mich",
+  "Header.Item2": "Erfahrung",
+  "Header.Item3": "Projekte",
+  "Header.Item4": "Kontakt",
+  "Header.cvBtn": "Lebenslauf",
+  "Header.cvName": "CV_Jose_Hernandez_German.pdf",
+
+  "Banner.Pretitle": "Hallo! Mein Name ist",
+  "Banner.Description": "Ich habe <span class='underline'>3 Jahre Erfahrung</span> in der Entwicklung von Mikrodiensten, RESTful APIs, Webanwendungen, Batch-Verarbeitungssystemen, Schnittstellen und technologischen Lösungen zur Verbesserung des Webs. Ich engagiere mich für das Schreiben und Refaktorisieren von sauberem, wiederverwendbarem und skalierbarem Code mit <span class='underline'>Spring Boot</span> und <span class='underline'>Angular</span>, wobei ich bewährte Verfahren und Entwicklungsstandards einhalte.",
+  "Banner.ActionBtn": "Hallo sagen",
+
+  "AboutMe.Title": "Über Mich",
+  "AboutMe.Paragraphs": [
+    "Mit <span class='underline'>3 Jahren Erfahrung</span> im Bereich Softwareentwicklung habe ich verschiedene Rollen übernommen, darunter <span class='underline'>Full-Stack-Entwickler</span>, <span class='underline'>Backend-Spezialist</span> und <span class='underline'>Front-End-Ingenieur</span>. Meine Leidenschaft liegt in der Schaffung robuster, skalierbarer und effizienter Lösungen, die einen spürbaren Unterschied machen.",
+    "Ich bin erfahren in der Entwicklung und Optimierung von Systemen, der Standardisierung von Programmierpraktiken und der konsequenten Bereitstellung von Mehrwert für jedes Projekt, an dem ich arbeite. Ob es darum geht, die Leistung zu verbessern, die Codequalität sicherzustellen oder komplexe Probleme zu lösen, ich strebe nach Exzellenz.",
+    "Neben meiner beruflichen Arbeit baue ich gerne persönliche Projekte, die von praktischen Werkzeugen bis hin zu experimentellen Ideen reichen. Dies ermöglicht es mir, meine Fähigkeiten kontinuierlich zu verfeinern und neue Technologien zu erkunden.",
+    "Einige der Technologien, auf die ich mich spezialisiert habe, sind (aber nicht beschränkt auf): <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span> und <span class='underline'>Mikroservices-Architektur</span>."
+  ],
+
+  "Experience.Title": "Erfahrung",
+  "Experience.Jobs": [
+    {
+      "Tab": "Full-Stack-Entwickler",
+      "Title": "Full-Stack-Entwickler",
+      "Date": "Okt 2021 - Mai 2022",
+      "Description": [
+        "Entwicklung und Wartung von Webanwendungen, RESTful APIs und Mikrodiensten mit Spring Boot und Angular.",
+        "Optimierung der Systemleistung durch Implementierung von Caching, asynchroner Verarbeitung und Datenbank-Indizierung.",
+        "Implementierung von Sicherheitsmaßnahmen zum Schutz der Datenintegrität und der Privatsphäre der Benutzer.",
+        "Verwendung von Continuous Integration und Continuous Deployment (CI/CD) Pipelines zur Automatisierung von Tests und Bereitstellungsprozessen.",
+        "Zusammenarbeit mit funktionsübergreifenden Teams zur Lieferung hochwertiger Softwarelösungen.",
+        "Teilnahme an Code-Reviews, Pair-Programming und Wissensaustausch-Sitzungen zur Verbesserung der Teamleistung."
+      ]
+    },
+    {
+      "Tab": "Freiberufler",
+      "Title": "Freiberufler",
+      "Date": "Mai 2022 - Gegenwart",
+      "Description": [
+        "Kontinuierliche Verbesserungen sowohl im Frontend als auch im Backend umsetzen, mit Fokus auf Leistungsoptimierung und Codequalität.",
+        "Entwicklung skalierbarer und robuster Plattformen mit Spring Boot und Angular, unter Verwendung funktionaler, reaktiver und objektorientierter Programmierparadigmen.",
+        "Automatisierung von Prozessen durch effiziente Datenstrukturen und Verbesserung der Workflow-Produktivität.",
+        "Zusammenarbeit mit Kunden, um deren Anforderungen zu verstehen und maßgeschneiderte Lösungen zu liefern.",
+        "Integration von Drittanbieter-APIs und -Diensten zur Erweiterung der Plattformfähigkeiten.",
+        "Sicherstellung der Verwendung bewährter Methoden in der Softwareentwicklung, einschließlich Versionskontrolle, Testen und Bereitstellung."
+      ]
+    }
+  ],
+
+  "FeatureProjects.Title": "Meine Projekte",
+  "FeatureProjects.Label": "Hervorgehobenes Projekt",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Gisselle",
+      "Description": "Webanwendung zur internen Unternehmensverwaltung, die Vertriebs-, Inkasso- und Überwachungsabteilungen abdeckt, sehr umfangreich und komplex mit verschiedenen Funktionen, erstellt mit <span class='underline'>Angular</span> und <span class='underline'>Laravel</span>. Sie arbeitet mit <span class='underline'>Websockets</span>, <span class='underline'>Zeitplänen</span>, <span class='underline'>Laravel Jobs</span>, Integrationen mit WordPress, Zadarma, LiveConnect usw.",
+      "imgs": [
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 1009582.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115514.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115702.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 115829.png",
+        "assets/images/gisselle/Captura de pantalla 2024-05-19 1009582.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Emelteciot",
+      "Description": "Überwachungsanwendung für Datenabfragen, erstellt mit <span class='underline'>Angular</span> und <span class='underline'>Laravel</span>. Die <span class='underline'>chart.js</span> Bibliothek wird angewendet.",
+      "imgs": [
+        "assets/images/proyex2/Captura de pantalla 2024-07-28 102852.png",
+        "assets/images/proyex2/849c117f-bed9-4406-9c13-c8669f655acc.png",
+        "assets/images/proyex2/62cdf90c-6196-4a6e-b639-8919cda4f749.png",
+        "assets/images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923.png",
+        "assets/images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923 (1).png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Vas Aviation",
+      "Description": "Anwendung zur Verfolgung von Kraftstoffversorgungsanfragen für Flugzeuge. Sie hat ein <span class='underline'>E-Mail-Modul</span>, <span class='underline'>Echtzeit-Benachrichtigungen</span>, <span class='underline'>CSV-Dateiverarbeitung für Datenimporte</span>, <span class='underline'>Preisangebote</span>. Entwickelt in <span class='underline'>Angular</span> und <span class='underline'>Laravel</span>.",
+      "imgs": [
+        "assets/images/vasaviation/capture0.png",
+        "assets/images/vasaviation/capture1.png",
+        "assets/images/vasaviation/capture2.png",
+        "assets/images/vasaviation/capture3.png",
+        "assets/images/vasaviation/capture4.png",
+        "assets/images/vasaviation/capture5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "GlobalJobs",
+      "Description": "E-Learning-Plattform entwickelt mit WordPress. Vollständig angepasstes Design, mit Plugins, die von Grund auf entwickelt wurden. Sie verfügt über ein angepasstes Zahlungsmodul, ein virtuelles Klassenzimmer und ein Kursverfolgungs-Dashboard.",
+      "imgs": [
+        "assets/images/globaljobs/capture1.png",
+        "assets/images/globaljobs/capture2.png",
+        "assets/images/globaljobs/capture3.png",
+        "assets/images/globaljobs/capture4.png",
+        "assets/images/globaljobs/capture5.png",
+        "assets/images/globaljobs/capture6.png"
+      ],
+      "Technologies": ["WordPress", "WordPress Codex", "PHP", "MySQL"]
+    },
+    {
+      "Title": "GlobalJobs",
+      "Description": "E-Commerce-Plattform für Technologieprodukte. Entwickelt mit WordPress und implementiert ein Versandssystem für Produkte. Sie hat Verkaufsberichte durch maßgeschneiderte Programmierung.",
+      "imgs": [
+        "assets/images/mbelectronics/capture0.png",
+        "assets/images/mbelectronics/capture1.png",
+        "assets/images/mbelectronics/capture2.png"
+      ],
+      "Technologies": ["WordPress", "Elementor", "Woocommerce", "WordPress Codex", "PHP", "MySQL"]
+    },
+    {
+      "Title": "Agrourbana",
+      "Description": "Überwachungsanwendung für Produktlager und Erstellung von Verkaufsberichten. Entwickelt mit Laravel und Vue.",
+      "imgs": [
+        "assets/images/agrourbana/capture0.png",
+        "assets/images/agrourbana/capture1.png",
+        "assets/images/agrourbana/capture2.png",
+        "assets/images/agrourbana/capture3.png",
+        "assets/images/agrourbana/capture4.png",
+        "assets/images/agrourbana/capture5.png"
+      ],
+      "Technologies": ["Laravel", "Vue", "SASS", "Chart.js", "Socket.io"]
+    }
+  ],
+
+  "Contact.Title": "Kontakt",
+  "Contact.Social": [
+    {
+      "Title": "LinkedIn",
+      "Href": "https://www.linkedin.com/in/josehernandez"
+    },
+    {
+      "Title": "GitHub",
+      "Href": "https://github.com/josehernandez"
+    }
+  ],
+  "Contact.Email": "jose.hernandez@example.com",
+  "Contact.Form": {
+    "Name": "Name",
+    "Email": "E-Mail",
+    "Subject": "Betreff",
+    "Message": "Nachricht",
+    "Send": "Senden"
+  }
+}
