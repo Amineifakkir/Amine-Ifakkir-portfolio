@@ -125,7 +125,51 @@
       "Technologies": ["Laravel", "Vue", "SASS", "Chart.js", "Socket.io"]
     }
   ],
-
+  
+    "OtherProjects.Title": "Weitere Projekte",
+    "OtherProjects.Projects": [
+      {
+        "Title": "Appliance",
+        "Description": "Erstellte eine Anwendung zur Verwaltung und Überwachung von Geräten und Hardwaresystemen. Dieses Projekt beinhaltete die Integration von Drittanbieter-APIs und Datenvisualisierungstools zur Verfolgung der Geräteleistung.",
+        "imgs": ["assets/images/hands-game.png"],
+        "ghLink": "https://github.com/Amineifakkir/Projet_appliance",
+        "Technologies": ["Angular", "SpringBoot", "Keycloak", "Angular-Animationen"]
+      },
+      {
+        "Title": "RE Front OffreOnline",
+        "Description": "Ein Front-End-Projekt, das darauf abzielt, die Benutzererfahrung für ein Online-Angebotsmanagementsystem zu verbessern. Die Schnittstelle wurde mit Angular entwickelt, mit Fokus auf Responsivität und benutzerfreundliche Navigation.",
+        "imgs": ["assets/images/countries-viewer.png"],
+        "Technologies": ["Angular", "RxJS", "SpringBoot", "API", "GIT", "SpringSecurity"]
+      },
+      {
+        "Title": "DPPI-GC",
+        "Description": "Entwickelte eine Anwendung zur allgemeinen Koordination und Projektmanagement. Verwendete Spring Boot und Angular, um ein System zu erstellen, das eine nahtlose Zusammenarbeit zwischen Teams und Echtzeit-Projektverfolgung ermöglicht.",
+        "ghLink": "",
+        "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "LDAP"]
+      },
+      {
+        "Title": "DPPI-FON",
+        "Description": "Arbeitete an einer Plattform, die sich auf funktionale Operationen und Management konzentriert. Umfassende Backend-Entwicklung mit Spring Boot und Frontend-Entwicklung mit Angular, um einen reibungslosen Datenfluss und funktionale Integration zu gewährleisten.",
+        "imgs": ["assets/images/dppi-fon.png"],
+        "ghLink": "",
+        "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "LDAP"]
+      },
+      {
+        "Title": "SDR",
+        "Description": "Erstellte eine Lösung, die Vertriebs- und Geschäftsentwicklungsteams unterstützt, indem Prozesse automatisiert und Echtzeitanalysen bereitgestellt werden. Implementiert mit Spring Boot und Angular für sowohl Backend- als auch Frontend-Entwicklung.",
+        "imgs": ["assets/images/sdr.png"],
+        "ghLink": "",
+        "Technologies": ["Angular", "SpringBoot", "ElasticSearch", "Kibana", "MySQL"]
+      },
+      {
+        "Title": "CRM-System",
+        "Description": "Entwickelte ein CRM-System mit Funktionen wie Lead-Management, Kundenverfolgung und Berichterstattung. Mit Spring Boot und Angular entwickelt, bietet das System Unternehmen eine effiziente Möglichkeit, Kundeninteraktionen zu verwalten.",
+        "imgs": ["assets/images/crm.png"],
+        "ghLink": "",
+        "Technologies": ["Angular", "SpringBoot", "MySQL", "SpringSecurity", "Bootstrap"]
+      }
+    ],
+  
   "Contact.Title": "Kontakt",
   "Contact.Social": [
     {

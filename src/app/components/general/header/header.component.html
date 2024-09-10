@@ -31,7 +31,7 @@
                         <img *ngIf='languageFormControl.value == "en"' width="20px" src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English">
                         <span *ngIf='languageFormControl.value == "en"' class="flag-text">English</span>
 
-                        <img *ngIf='languageFormControl.value == "gr"' width="20px" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.allwavingflags.com%2F2018%2F06%2Fflag-of-germany.html&psig=AOvVaw20AB4vpcd9O4Bw9mKJwfGM&ust=1726068764478000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDFmK7ZuIgDFQAAAAAdAAAAABAE" alt="Germany">
+                        <img *ngIf='languageFormControl.value == "gr"' width="20px" src="" alt="Germany">
                         <span *ngIf='languageFormControl.value == "gr"' class="flag-text">Deutsh</span>
 
                         <img *ngIf='languageFormControl.value == "fr"' width="20px" src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
@@ -47,13 +47,15 @@
                                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                             </svg>
                         </div>
-                        <div (click)='changeLanguage("gr")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "gr"'>
-                            <img width="20px" src="src/assets/flags/gr.png" alt="Germany">
-                            <span class="flag-text">Deutsh</span>
+                        <div (click)='changeLanguage("gr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector" [class.active]='languageFormControl.value == "gr"'>
+                            <img width="20px" src="https://www.worldometers.info/img/flags/de-flag.gif" alt="Germany">
+                            <span class="flag-text">Deutsch</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
                                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                             </svg>
                         </div>
+                        
+                        
                         <div (click)='changeLanguage("fr")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "fr"'>
                             <img width="20px" src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
                             <span class="flag-text">French</span>
@@ -85,12 +87,12 @@
                             </a>
                         </li>
                         <li (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")'>
-                          <a (click)='scroll("proyects")'>
+                          <a (click)='scroll("more-proyects")'>
                               <span>03. </span> {{"Header.Item3" | translate}}
                           </a>
                       </li>
                       <li (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
-                        <a (click)='scroll("proyects")'>
+                        <a (click)='scroll("contact")'>
                             <span>04. </span> {{"Header.Item4" | translate}}
                         </a>
                       </li>
@@ -108,13 +110,15 @@
                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
                                 </div>
-                                <div (click)='changeLanguage("gr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "gr"'>
-                                    <img src="src\assets\flags\gr.png" alt="Germany">
-                                    <span class="flag-text">Deutsh</span>
+                                <div (click)='changeLanguage("gr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector" [class.active]='languageFormControl.value == "gr"'>
+                                    <img width="20px" src="https://www.worldometers.info/img/flags/de-flag.gif" alt="Germany">
+                                    <span class="flag-text">Deutsch</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                      </svg>
+                                    </svg>
                                 </div>
+                                
+                                
                                 <div (click)='changeLanguage("fr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "fr"'>
                                     <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
                                     <span class="flag-text">French</span>
