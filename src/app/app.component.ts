@@ -4,7 +4,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import {LanguageService} from "src/app/services/language/language.service"
 import { Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,17 +13,19 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'amine ifakkir';
-  
+  isLoading: boolean = true;
+
   constructor(
     private titleService: Title,
     private metaService: Meta,
     private translateService: TranslateService,
     private location: Location,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private router:Router
     ){
     }
   ngOnInit(): void{
-    
+    this.preloader();
     this.languageService.initLanguage()
 
     this.titleService.setTitle( "Amine Ifakkir | Full-stack Developer" );
@@ -35,5 +37,16 @@ export class AppComponent implements OnInit{
     
     AOS.init(); 
 
+  }
+
+  preloader(){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.isLoading = true; // Show preloader
+      }
+      if (event instanceof NavigationEnd) {
+        this.isLoading = false; // Hide preloader after route change
+      }
+    });
   }
 }
