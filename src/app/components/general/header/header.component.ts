@@ -73,6 +73,12 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  downloadCVConst(){
+    let link = document.createElement ("a");
+    link. download = "Amine-IFAKKIR.pdf";
+    link.href = "assets/cv/Amine-IFAKKIR.pdf* ";
+    link.click();
+  }
   @HostListener('window:scroll', ['getScrollPosition($event)'])
     getScrollPosition(event) {
         this.pageYPosition=window.pageYOffset
