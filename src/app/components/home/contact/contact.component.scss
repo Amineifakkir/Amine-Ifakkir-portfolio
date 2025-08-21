@@ -1,65 +1,113 @@
 @import "./../../../../variables.scss";
 
-.contact{
-
+.contact {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 800px;
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     display: table;
+    position: relative;
+    
+    // Background gradient
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, rgba(17, 34, 64, 0.5) 0%, rgba(10, 25, 47, 0) 70%);
+        z-index: 0;
+    }
 
-    .container{
+    .container {
         display: table-cell;
         vertical-align: middle;
+        position: relative;
+        z-index: 1;
     }
 
-    .contact-title{
+    .section-box {
+        padding: 120px 0;
+    }
 
+    .contact-title {
         position: relative;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         white-space: nowrap;
-        font-size: 60px;
-        font-weight: 600;
-        color: $LightestSlate;
+        font-size: 70px; // Larger font
+        font-weight: 700; // Bolder
+        color: $White; // Increased contrast
         margin: auto;
         width: fit-content;
+        letter-spacing: -1px;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
     }
-    .contact-pre-title{
+    
+    .contact-pre-title {
         position: relative;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        margin: 10px 0 40px;
+        justify-content: center;
+        margin: 0 0 20px;
         width: 100%;
-        white-space: nowrap;
-        font-size: 32px;
-        display: block;
+        font-size: 20px; // Larger
         color: $Green;
-        font-size: 16px;
         font-family: $CodeFont;
         font-weight: normal;
-        margin-bottom: 20px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
         text-align: center;
     }
+    
+    p {
+        color: $LightestSlate;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // Enhanced button styling
+    .main-btn {
+        padding: 1.35rem 2.5rem;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(100, 255, 218, 0.05));
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+        
+        &:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(100, 255, 218, 0.1));
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+        
+        &:active {
+            transform: translateY(-2px);
+        }
+    }
+}
 
+@media (max-width: 768px) {
+    .contact {
+        min-height: 80vh;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        
+        .contact-title {
+            font-size: 50px; // Smaller on mobile
+        }
+        
+        .contact-pre-title {
+            font-size: 18px;
+        }
+    }
 }
 
 @media (max-width: 768px){

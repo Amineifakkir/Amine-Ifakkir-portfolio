@@ -36,6 +36,7 @@ export class HeaderComponent implements OnInit {
   pageYPosition: number;
   languageFormControl: UntypedFormControl= new UntypedFormControl();
   cvName: string = "";
+  activeSection: string = '';
 
   constructor(
     private router: Router,
@@ -44,20 +45,49 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
-
     this.languageFormControl.setValue(this.languageService.language)
-
+    
+    // Initialiser la détection de section active
+    this.checkActiveSection();
   }
 
   scroll(el) {
     if(document.getElementById(el)) {
       document.getElementById(el).scrollIntoView({behavior: 'smooth'});
+      this.activeSection = el; // Mettre à jour la section active
     } else{
       this.router.navigate(['/home']).then(()=> document.getElementById(el).scrollIntoView({behavior: 'smooth'}) );
+      this.activeSection = el; // Mettre à jour la section active
     }
     this.responsiveMenuVisible=false;
+  }
+
+  // Méthode pour vérifier la section active en fonction du défilement
+  checkActiveSection() {
+    const sections = ['about', 'jobs', 'more-proyects', 'contact'];
+    
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + 100; // Ajouter une marge pour la navbar
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            this.activeSection = section;
+            break;
+          }
+        }
+      }
+    });
+  }
+
+  // Méthode pour vérifier si une section est active
+  isActive(section: string): boolean {
+    return this.activeSection === section;
   }
 
   downloadCV(){

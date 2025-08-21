@@ -1,11 +1,13 @@
 @import "./../../../../variables.scss";
 .main-navbar {
     height: 70px;
-    background: $Navy;
+    background: rgba(10, 25, 47, 0.95); // Ajout légère transparence
+    backdrop-filter: blur(4px);
     font-family: $CodeFont;
+    
     .menu-ul{
       li{
-        margin: 0px 13px;
+        margin: 0px 15px;
       }
       // First and Last li has no margin
       li:first-child{
@@ -14,8 +16,26 @@
       li:last-child{
         margin-right: 0px;
       }
-
     }
+    
+    .active-nav-item {
+      .nav-text {
+        color: $Green !important;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $Green;
+          border-radius: 1px;
+        }
+      }
+    }
+    
     .menu-responsive {
         position: fixed;
         top: 0px;
@@ -49,7 +69,6 @@
               width: 35px;
             }
           }
-
         }
     }
     .aside-show {
@@ -129,8 +148,9 @@
         font-size: 12px;
     }
     .nav-text{
-      color: $LightestSlate !important;
+      color: $White !important;
       padding-bottom: 4px;
+      font-weight: 500;
     }
     .menu-wrapper {
         top: 0;

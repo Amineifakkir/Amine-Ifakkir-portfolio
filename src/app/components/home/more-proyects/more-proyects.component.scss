@@ -1,102 +1,144 @@
 @import "./../../../../variables.scss";
 
-.more-proyects{
-    .proyect-col{
-        padding: 10px;
-        height: 400px;
+.more-proyects {
+    .proyect-col {
+        padding: 15px; // Increased padding between cards
+        height: auto; // Auto height for responsive
+        margin-bottom: 15px; // Added space between rows
 
         .more-proyect-box {
             box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
-            -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
+            transition: all 0.3s cubic-bezier(0.645,0.045,0.355,1);
             display: flex;
-            -webkit-box-pack: justify;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
             justify-content: space-between;
-            -webkit-align-items: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-align-items: flex-start;
-            -webkit-box-align: flex-start;
-            -ms-flex-align: flex-start;
             align-items: flex-start;
+            flex-direction: column;
             position: relative;
             padding: 2rem 1.75rem;
-            height: 100%;
-            border-radius: 3px;
-            -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+            min-height: 380px; // Set minimum height for consistency
+            border-radius: 8px; // Increased border radius for modern look
             background-color: $LightNavy;
             cursor: pointer;
+            border: 1px solid transparent;
+            overflow: hidden;
+            
+            // Background glow effect
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at top right, rgba(100,255,218,0.1), transparent 70%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 0;
+            }
+            
+            // Content z-index
+            & > * {
+                position: relative;
+                z-index: 1;
+            }
 
             &:hover {
-                -webkit-transform: translateY(-5px);
-                -ms-transform: translateY(-5px);
-                transform: translateY(-5px);
+                transform: translateY(-10px);
+                border: 1px solid rgba(100, 255, 218, 0.2);
+                
+                &::before {
+                    opacity: 1;
+                }
+                
+                .other-proyect-title {
+                    color: $Green;
+                }
+                
+                svg, i {
+                    transform: scale(1.1);
+                    color: $Green;
+                }
             }
+            
             &:hover, &:focus {
                 box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
             }
 
-            svg{
+            svg, i {
                 width: 40px;
                 height: 40px;
-                color: $Green;
-            }
-
-            .other-proyect-title{
-                margin: 0 0 10px;
-                font-size: 22px;
                 color: $LightestSlate;
+                transition: all 0.25s ease;
             }
 
-            .other-proyect-description{
+            .other-proyect-title {
+                margin: 0 0 15px; // Increased margin
+                font-size: 22px;
+                color: $White; // Increased contrast
+                font-weight: 600;
+                transition: color 0.25s ease;
+            }
+
+            .other-proyect-description {
                 font-size: 17px;
-                color: $LightSlate;
+                color: $LightestSlate; // Increased contrast
+                line-height: 1.6; // Improved readability
             }
 
-            .more-proyects-skills{
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
+            .more-proyects-skills {
                 display: flex;
-                -webkit-align-items: flex-end;
-                -webkit-box-align: flex-end;
-                -ms-flex-align: flex-end;
                 align-items: flex-end;
-                -webkit-box-flex: 1;
-                -webkit-flex-grow: 1;
-                -ms-flex-positive: 1;
                 flex-grow: 1;
-                -webkit-flex-wrap: wrap;
-                -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
                 padding: 0;
-                margin: 20px 0 0 0;
+                margin: 25px 0 0 0; // Increased margin
                 list-style: none;
 
-                li{
-                    font-size: 12px;
-                    color: $Slate;
+                li {
+                    font-size: 13px;
+                    color: $LightSlate;
                     line-height: 1.75;
                     margin-right: 15px;
+                    margin-bottom: 5px;
                     font-family: $CodeFont;
-                    .underline{
+                    transition: transform 0.2s ease;
+                    
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                    
+                    .underline {
                         padding-bottom: 3.5px;
                     }
                 }
             }
         }
     }
+}
 
+// Row spacing for better separation between project sections
+.row.projects-row {
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1300px) {
+    .more-proyects {
+        .proyect-col {
+            height: auto;
+        }
+    }
+}
+
+// Add animation for cards appearing
+.proyect-col[data-aos="fade-up"] {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    
+    &.aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
