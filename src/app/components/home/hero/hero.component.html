@@ -1,0 +1,19 @@
+<section class="hero" [@fadeIn] role="region" aria-labelledby="hero-heading">
+  <canvas #heroCanvas class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__glow hero__glow--primary" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--secondary" aria-hidden="true"></div>
+
+  <div class="hero__content" data-3d-hover #heroContent>
+    <span class="neon-badge">{{ 'hero.pretitle' | translate }}</span>
+    <h1 id="hero-heading" class="hero__title big-title">{{ 'hero.title' | translate }}</h1>
+    <p class="hero__subtitle">{{ 'hero.subtitle' | translate }}</p>
+    <div class="hero__actions">
+      <button type="button" (click)="openEmail()">
+        {{ 'hero.cta' | translate }}
+      </button>
+      <a class="hero__ghost" (click)="scrollToWork()">
+        {{ 'hero.secondary' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

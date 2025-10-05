@@ -1,33 +1,28 @@
-<section class="section" id="contact">
-  <div class="container contact">
-    <div class="section-box">
-      <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
-        <h3 class="contact-pre-title big-subtitle">
-          05. {{ "Contact.Pretitle" | translate }}
-        </h3>
-        <h4 class="e-font contact-title big-title">
-          {{ "Contact.Title" | translate }}
-        </h4>
-      </div>
-      <p data-aos="fade-up" data-aos-duration="1000" class="mx-auto">
-        {{ "Contact.Content" | translate }}
+<section class="section contact" id="contact" data-anchor="contact" [@fadeUp]="''">
+  <div class="section-box contact__box">
+    <div class="contact__glow contact__glow--one" aria-hidden="true"></div>
+    <div class="contact__glow contact__glow--two" aria-hidden="true"></div>
+
+    <div class="contact__card" data-3d-hover [@staggerChildren]="''">
+      <span class="contact__badge neon-badge">04. {{ 'Contact.Pretitle' | translate }}</span>
+      <h2 class="contact__title big-title" [@fadeUp]="''">
+        {{ 'Contact.Title' | translate }}
+      </h2>
+      <p class="contact__copy" [@fadeUp]="''">
+        {{ 'Contact.Content' | translate }}
       </p>
-      <div class="mt-5">
+      <div class="contact__actions" [@fadeUp]="''">
+        <button type="button" (click)="openEmail()">
+          {{ 'Contact.Btn' | translate }}
+        </button>
         <a
-          (click)="
-            analyticsService.sendAnalyticEvent(
-              'click_send_mail',
-              'contact',
-              'email'
-            )
-          "
-          href="mailto:amineifakkir@hotmail.com"
+          class="contact__ghost"
+          href="https://www.linkedin.com/in/amineifakkir"
           target="_blank"
-          class="main-btn cta-btn"
-          data-aos="fade-up"
-          data-aos-duration="1000"
+          rel="noopener"
         >
-          {{ "Contact.Btn" | translate }}
+          <span>{{ 'hero.secondary' | translate }}</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>

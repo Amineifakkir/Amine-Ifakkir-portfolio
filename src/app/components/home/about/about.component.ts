@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { fadeUp, staggerChildren } from 'src/app/animations';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  animations: [fadeUp, staggerChildren]
 })
 export class AboutComponent implements OnInit {
   imageError: boolean = false;

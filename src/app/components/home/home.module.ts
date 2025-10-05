@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
+import { HeroComponent } from './hero/hero.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MoreProyectsComponent } from './more-proyects/more-proyects.component';
 import { ProyectsComponent } from './proyects/proyects.component';
@@ -22,6 +23,7 @@ export function HttpLoaderFactory(http: HttpClient){
 @NgModule({
   declarations: [
     HomeComponent,
+    HeroComponent,
     BannerComponent,
     AboutComponent,
     JobsComponent,

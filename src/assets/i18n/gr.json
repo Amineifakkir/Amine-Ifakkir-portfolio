@@ -6,6 +6,12 @@
   "Header.cvBtn": "Lebenslauf",
   "Header.cvName": "CV_Jose_Hernandez_German.pdf",
 
+  "hero.pretitle": "Full-Stack Μηχανικός Neon",
+  "hero.title": "Δημιουργώ καθηλωτικές ψηφιακές εμπειρίες.",
+  "hero.subtitle": "Angular, Spring Boot και 3D animation ενώνονται για να ζωντανέψουν διαδραστικά προϊόντα.",
+  "hero.cta": "Ξεκίνησε ένα project",
+  "hero.secondary": "Δες τα πρόσφατα έργα",
+
   "Banner.Pretitle": "Hallo! Mein Name ist",
   "Banner.Description": "Ich habe <span class='underline'>3 Jahre Erfahrung</span> in der Entwicklung von Mikrodiensten, RESTful APIs, Webanwendungen, Batch-Verarbeitungssystemen, Schnittstellen und technologischen Lösungen zur Verbesserung des Webs. Ich engagiere mich für das Schreiben und Refaktorisieren von sauberem, wiederverwendbarem und skalierbarem Code mit <span class='underline'>Spring Boot</span> und <span class='underline'>Angular</span>, wobei ich bewährte Verfahren und Entwicklungsstandards einhalte.",
   "Banner.ActionBtn": "Hallo sagen",
