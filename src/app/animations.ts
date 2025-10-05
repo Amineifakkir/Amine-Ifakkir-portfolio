@@ -16,11 +16,12 @@ export const fadeUp = trigger('fadeUp', [
 
 export const staggerChildren = trigger('staggerChildren', [
   transition(':enter', [
-    query(':self > *', [
+    // Use :scope > * to target direct children of the element in a valid selector
+    query(':scope > *', [
       style({ opacity: 0, transform: 'translateY(15px)' }),
       stagger(100, [
         animate('320ms ease-out', style({ opacity: 1, transform: 'none' }))
       ])
-    ])
+    ], { optional: true })
   ])
 ]);

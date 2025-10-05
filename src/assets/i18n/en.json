@@ -234,9 +234,11 @@
     }
   ],
 
-  "Contact.Pretitle": "And... Now?",
-  "Contact.Title": "Say Hi!",
-  "Contact.Content": "I will be glad to hear from you if you want to discuss new opportunities. Write to me, and I will respond as soon as I see your message.",
-  "Contact.Btn": "Contact Me",
-  "Contact.Secondary": "Connect on LinkedIn"
+  "contact": {
+    "preTitle": "And... Now?",
+    "title": "Say Hi!",
+    "content": "I will be glad to hear from you if you want to discuss new opportunities. Write to me, and I will respond as soon as I see your message.",
+    "cta": "Contact Me",
+    "secondary": "Connect on LinkedIn"
+  }
 }
