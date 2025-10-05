@@ -59,7 +59,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   }
 
   scrollToWork(): void {
-    const section = document.querySelector('[data-anchor="projects"]');
+    const section = document.querySelector('[data-anchor="tech-stack"]');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

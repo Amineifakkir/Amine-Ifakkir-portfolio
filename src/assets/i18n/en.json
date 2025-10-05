@@ -1,16 +1,17 @@
 {
-  "Header.Item1": "About Me",
-  "Header.Item2": "Experience",
-  "Header.Item3": "Projects",
-  "Header.Item4": "Contact",
+  "Header.Item1": "About",
+  "Header.Item2": "Tech Stack",
+  "Header.Item3": "Experience",
+  "Header.Item4": "Projects",
+  "Header.Item5": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Jose_Hernandez_Spanish.pdf",
 
-  "hero.pretitle": "Neon Full-Stack Engineer",
-  "hero.title": "I build immersive digital experiences.",
-  "hero.subtitle": "Angular, Spring Boot, and 3D motion collide to craft interactive products that feel alive.",
+  "hero.pretitle": "Full-Stack Java & Angular Engineer",
+  "hero.title": "I build resilient platforms end to end.",
+  "hero.subtitle": "From Java and Spring Boot microservices to immersive Angular experiences, I deliver reliable, human-centred products.",
   "hero.cta": "Start a project",
-  "hero.secondary": "Explore recent work",
+  "hero.secondary": "Explore my stack",
 
   "Banner.Pretitle": "Hello! My name is",
   "Banner.Description": "I have <span class='underline'>3 years of experience</span> in developing microservices, RESTful APIs, web applications, batch processing systems, interfaces, and technological solutions aimed at improving the web. I am committed to writing and refactoring clean, reusable, and scalable code using <span class='underline'>Spring Boot</span> and <span class='underline'>Angular</span>, while adhering to best practices and development standards.",
@@ -18,11 +19,34 @@
 
   "AboutMe.Title": "About Me",
  "AboutMe.Paragraphs": [
-    "With <span class='underline'>3 years of experience</span> in the software development field, I have taken on multiple roles including <span class='underline'>Full-Stack Developer</span>, <span class='underline'>Backend Specialist</span>, and <span class='underline'>Front-End Engineer</span>. My passion lies in creating robust, scalable, and efficient solutions that make a tangible difference.",
-    "I excel at developing and optimizing systems, standardizing coding practices, and consistently delivering value to every project I work on. Whether it's enhancing performance, ensuring code quality, or solving complex problems, I am committed to excellence.",
-    "In addition to my professional work, I enjoy building personal projects that range from practical tools to experimental ideas. This allows me to continually refine my skills and explore new technologies.",
-    "Some of the technologies I specialize in include (but are not limited to): <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, and <span class='underline'>Microservices Architecture</span>."
+    "As a <span class='underline'>full-stack Java & Angular engineer</span>, I design and ship platforms that balance clean architecture with delightful UX.",
+    "On the backend I craft <span class='underline'>Spring Boot</span> microservices, optimize SQL data models, and wire resilient integrations that scale with business needs.",
+    "On the frontend I translate complex requirements into <span class='underline'>accessible Angular apps</span>, pairing reactive state management with purposeful motion.",
+    "I thrive in collaborative, product-driven teams where code quality, observability, and continuous delivery unlock measurable impact."
 ],
+
+  "TechStack": {
+    "Title": "Tech Stack",
+    "Subtitle": "Technology choices that let me move fast without breaking reliability.",
+    "Groups": [
+      {
+        "Label": "Backend & Platform",
+        "Items": ["Java", "Spring Boot", "Hibernate", "REST & GraphQL APIs", "Micronaut", "JUnit"]
+      },
+      {
+        "Label": "Frontend & Experience",
+        "Items": ["Angular", "RxJS", "NgRx", "SCSS", "Three.js", "GSAP"]
+      },
+      {
+        "Label": "DevOps & Cloud",
+        "Items": ["Docker", "GitHub Actions", "Kubernetes", "AWS", "Azure", "SonarQube"]
+      },
+      {
+        "Label": "Databases & Messaging",
+        "Items": ["PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Kafka", "Elasticsearch"]
+      }
+    ]
+  },
 
 
   "Experience.Title": "Experience",
@@ -213,5 +237,6 @@
   "Contact.Pretitle": "And... Now?",
   "Contact.Title": "Say Hi!",
   "Contact.Content": "I will be glad to hear from you if you want to discuss new opportunities. Write to me, and I will respond as soon as I see your message.",
-  "Contact.Btn": "Contact Me"
+  "Contact.Btn": "Contact Me",
+  "Contact.Secondary": "Connect on LinkedIn"
 }
