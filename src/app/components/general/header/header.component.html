@@ -1,137 +1,207 @@
-<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition>0'>
-    <div class="container">
-        <a class="navbar-brand text-light" [routerLink]="'inicio'">
-            <img src='assets/images/logo.png' width='75' style="color: azure;" />
-        </a>
-        <ul ngbNav #nav="ngbNav" class="menu-ul">
-            <li ngbNavItem (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' [class.active-nav-item]="isActive('about')">
-                <a ngbNavLink (click)='scroll("about")'><span class='nav-number'>01. </span> <span class="underline nav-text"> {{"Header.Item1" | translate}}</span></a>
-                <ng-template ngbNavContent>First content</ng-template>
-            </li>
-            <li ngbNavItem (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")' [class.active-nav-item]="isActive('jobs')">
-                <a ngbNavLink (click)='scroll("jobs")'><span class='nav-number'>02. </span> <span class="underline nav-text"> {{"Header.Item2" | translate}}</span></a>
-                <ng-template ngbNavContent>Second content</ng-template>
-            </li>
-            <li ngbNavItem (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")' [class.active-nav-item]="isActive('projects')">
-                <a ngbNavLink (click)='scroll("projects")'><span class='nav-number'>03. </span> <span class="underline nav-text"> {{"Header.Item3" | translate}}</span></a>
-                <ng-template ngbNavContent>Second content</ng-template>
-            </li>
-            <li ngbNavItem (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")' [class.active-nav-item]="isActive('contact')">
-                <a ngbNavLink (click)='scroll("contact")'><span class='nav-number'>04. </span> <span class="underline nav-text"> {{"Header.Item4" | translate}}</span></a>
-                <ng-template ngbNavContent>Second content</ng-template>
-            </li>
-            <li ngbNavItem>
-                <a (click)="downloadCVConst()" class="main-btn cv-btn" ngbNavLink>
-                  {{"Header.cvBtn" | translate}}
-                </a>
-            </li>
-            <li>
-                <div ngbDropdown class="d-inline-block">
-                    <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
-                        <img *ngIf='languageFormControl.value == "en"' width="20px" src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English">
-                        <span *ngIf='languageFormControl.value == "en"' class="flag-text">English</span>
+<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]="pageYPosition > 0">
+  <div class="container nav-container">
+    <a class="navbar-brand" [routerLink]="'inicio'">
+      <img src="assets/images/logo.png" alt="Amine Ifakkir" />
+    </a>
 
-                        <img *ngIf='languageFormControl.value == "gr"' width="20px" src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Germany">
-                        <span *ngIf='languageFormControl.value == "gr"' class="flag-text">Deutsh</span>
+    <div class="nav-shell">
+      <ul class="menu-list">
+        <li
+          class="menu-item"
+          [class.is-active]="isActive('about')"
+        >
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_about', 'menu', 'click'); scroll('about')">
+            <span class="menu-index">01.</span>
+            <span class="menu-label">{{ 'Header.Item1' | translate }}</span>
+          </button>
+        </li>
+        <li
+          class="menu-item"
+          [class.is-active]="isActive('tech-stack')"
+        >
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_stack', 'menu', 'click'); scroll('tech-stack')">
+            <span class="menu-index">02.</span>
+            <span class="menu-label">{{ 'Header.Item2' | translate }}</span>
+          </button>
+        </li>
+        <li
+          class="menu-item"
+          [class.is-active]="isActive('jobs')"
+        >
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_experience', 'menu', 'click'); scroll('jobs')">
+            <span class="menu-index">03.</span>
+            <span class="menu-label">{{ 'Header.Item3' | translate }}</span>
+          </button>
+        </li>
+        <li
+          class="menu-item"
+          [class.is-active]="isActive('projects')"
+        >
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_jobs', 'menu', 'click'); scroll('projects')">
+            <span class="menu-index">04.</span>
+            <span class="menu-label">{{ 'Header.Item4' | translate }}</span>
+          </button>
+        </li>
+        <li
+          class="menu-item"
+          [class.is-active]="isActive('contact')"
+        >
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_contact', 'menu', 'click'); scroll('contact')">
+            <span class="menu-index">05.</span>
+            <span class="menu-label">{{ 'Header.Item5' | translate }}</span>
+          </button>
+        </li>
+      </ul>
 
-                        <img *ngIf='languageFormControl.value == "fr"' width="20px" src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
-                        <span *ngIf='languageFormControl.value == "fr"' class="flag-text">French</span>
+      <div class="nav-actions">
+        <button type="button" class="resume-chip" (click)="downloadCVConst()">
+          {{ 'Header.cvBtn' | translate }}
+        </button>
 
-                        <svg class='arrow-language' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-                    </div>
-                    <div ngbDropdownMenu aria-labelledby="dropdownForm1">
-                        <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
-                            <img width="20px" src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English">
-                            <span class="flag-text">English</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                        </div>
-                        <div (click)='changeLanguage("gr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector" [class.active]='languageFormControl.value == "gr"'>
-                            <img width="20px" src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Germany">
-                            <span class="flag-text">Deutsch</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                        </div>
-                        
-                        
-                        <div (click)='changeLanguage("fr")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "fr"'>
-                            <img width="20px" src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
-                            <span class="flag-text">French</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                        </div>
-                     
-                       
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="menu-wrapper">
-            <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible' class="hamburger-menu"></div>
+        <div class="language-select" ngbDropdown>
+          <button
+            class="language-trigger"
+            id="languageDropdown"
+            ngbDropdownToggle
+            type="button"
+          >
+            <img
+              *ngIf="languageFormControl.value === 'en'"
+              src="https://www.worldometers.info/img/flags/us-flag.gif"
+              alt="English"
+            />
+            <img
+              *ngIf="languageFormControl.value === 'gr'"
+              src="https://www.worldometers.info/img/flags/gm-flag.gif"
+              alt="Deutsch"
+            />
+            <img
+              *ngIf="languageFormControl.value === 'fr'"
+              src="https://www.worldometers.info/img/flags/fr-flag.gif"
+              alt="French"
+            />
+            <span class="language-label" *ngIf="languageFormControl.value === 'en'">English</span>
+            <span class="language-label" *ngIf="languageFormControl.value === 'gr'">Deutsch</span>
+            <span class="language-label" *ngIf="languageFormControl.value === 'fr'">French</span>
+            <svg class="language-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+            </svg>
+          </button>
+
+          <div ngbDropdownMenu aria-labelledby="languageDropdown" class="language-menu">
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'en'"
+              (click)="changeLanguage('en'); responsiveMenuVisible = false"
+            >
+              <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English" />
+              <span>English</span>
+            </button>
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'gr'"
+              (click)="changeLanguage('gr'); responsiveMenuVisible = false"
+            >
+              <img src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Deutsch" />
+              <span>Deutsch</span>
+            </button>
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'fr'"
+              (click)="changeLanguage('fr'); responsiveMenuVisible = false"
+            >
+              <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French" />
+              <span>French</span>
+            </button>
+          </div>
         </div>
-        <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
-            <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
-                <nav>
-                    <ol>
-                        <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' [class.active-nav-item]="isActive('about')">
-                            <a (click)='scroll("about")'>
-                                <span>01. </span> {{"Header.Item1" | translate}}
-                            </a>
-                        </li>
-                        <li (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")' [class.active-nav-item]="isActive('jobs')">
-                            <a (click)='scroll("jobs")'>
-                                <span>02. </span> {{"Header.Item2" | translate}}
-                            </a>
-                        </li>
-                        <li (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")' [class.active-nav-item]="isActive('projects')">
-                          <a (click)='scroll("projects")'>
-                              <span>03. </span> {{"Header.Item3" | translate}}
-                          </a>
-                      </li>
-                      <li (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")' [class.active-nav-item]="isActive('contact')">
-                        <a (click)='scroll("contact")'>
-                            <span>04. </span> {{"Header.Item4" | translate}}
-                        </a>
-                      </li>
-                      <li>
-                          <a (click)="downloadCVConst()" class="main-btn cv-btn">
-                            {{"Header.cvBtn" | translate}}
-                          </a>
-                      </li>
-                      <li>
-                            <div class="language-container">
-                                <div (click)='changeLanguage("en")' style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" class="language-container language-container-selector" [class.active]='languageFormControl.value == "en"'>
-                                    <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English">
-                                    <span class="flag-text">English</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                </div>
-                                <div (click)='changeLanguage("gr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector" [class.active]='languageFormControl.value == "gr"'>
-                                    <img width="20px" src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Germany">
-                                    <span class="flag-text">Deutsch</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                </div>
-                                
-                                
-                                <div (click)='changeLanguage("fr")' style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;' class="language-container language-container-selector active" [class.active]='languageFormControl.value == "fr"'>
-                                    <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French">
-                                    <span class="flag-text">French</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                      </svg>
-                                </div>
-                               
-                            </div>
-                      </li>
-                    </ol>
-                </nav>
-            </aside>
-        </div>
+      </div>
     </div>
+
+    <div class="menu-wrapper">
+      <div class="hamburger-menu" [class.animate]="responsiveMenuVisible" (click)="responsiveMenuVisible = !responsiveMenuVisible"></div>
+    </div>
+  </div>
+
+  <div
+    class="menu-responsive"
+    [class.aside-show]="responsiveMenuVisible"
+    [ngStyle]="{ 'pointer-events': !responsiveMenuVisible ? 'none' : '' }"
+  >
+    <aside>
+      <nav>
+        <ul class="mobile-menu">
+          <li [class.is-active]="isActive('about')">
+            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_about', 'menu', 'click'); responsiveMenuVisible = false; scroll('about')">
+              <span>01.</span>
+              {{ 'Header.Item1' | translate }}
+            </button>
+          </li>
+          <li [class.is-active]="isActive('tech-stack')">
+            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_stack', 'menu', 'click'); responsiveMenuVisible = false; scroll('tech-stack')">
+              <span>02.</span>
+              {{ 'Header.Item2' | translate }}
+            </button>
+          </li>
+          <li [class.is-active]="isActive('jobs')">
+            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_experience', 'menu', 'click'); responsiveMenuVisible = false; scroll('jobs')">
+              <span>03.</span>
+              {{ 'Header.Item3' | translate }}
+            </button>
+          </li>
+          <li [class.is-active]="isActive('projects')">
+            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_jobs', 'menu', 'click'); responsiveMenuVisible = false; scroll('projects')">
+              <span>04.</span>
+              {{ 'Header.Item4' | translate }}
+            </button>
+          </li>
+          <li [class.is-active]="isActive('contact')">
+            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_contact', 'menu', 'click'); responsiveMenuVisible = false; scroll('contact')">
+              <span>05.</span>
+              {{ 'Header.Item5' | translate }}
+            </button>
+          </li>
+        </ul>
+
+        <div class="mobile-actions">
+          <button type="button" class="resume-chip" (click)="downloadCVConst(); responsiveMenuVisible = false">
+            {{ 'Header.cvBtn' | translate }}
+          </button>
+
+          <div class="mobile-language">
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'en'"
+              (click)="changeLanguage('en')"
+            >
+              <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English" />
+              <span>English</span>
+            </button>
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'gr'"
+              (click)="changeLanguage('gr')"
+            >
+              <img src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Deutsch" />
+              <span>Deutsch</span>
+            </button>
+            <button
+              type="button"
+              class="language-option"
+              [class.is-active]="languageFormControl.value === 'fr'"
+              (click)="changeLanguage('fr')"
+            >
+              <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French" />
+              <span>French</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </aside>
+  </div>
 </nav>

@@ -1,0 +1,100 @@
+:host {
+  display: block;
+}
+
+.tech-stack__header {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 6vw, 3.75rem);
+  max-width: 720px;
+}
+
+.tech-stack__intro {
+  margin: 0;
+  font-size: clamp(1rem, 1.1rem + 0.2vw, 1.15rem);
+  color: rgba(233, 236, 242, 0.75);
+  line-height: 1.7;
+}
+
+.tech-stack__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.tech-card {
+  position: relative;
+  padding: clamp(1.75rem, 5vw, 2.3rem);
+  border-radius: var(--radius);
+  background: linear-gradient(150deg, rgba(19, 24, 35, 0.92), rgba(7, 10, 18, 0.88));
+  border: 1px solid rgba(0, 255, 224, 0.18);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  gap: 1.25rem;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.tech-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0, 255, 224, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+}
+
+.tech-card:hover {
+  border-color: rgba(255, 107, 203, 0.3);
+  box-shadow: 0 26px 46px rgba(4, 12, 25, 0.55);
+}
+
+.tech-card__title {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.2rem + 0.2vw, 1.35rem);
+}
+
+.tech-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.tech-card__item {
+  color: rgba(233, 236, 242, 0.7);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.tech-card__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  box-shadow: 0 0 12px rgba(0, 255, 224, 0.45);
+}
+
+@media (max-width: 600px) {
+  .tech-stack__header {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .tech-stack__intro {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+<section class="section tech-stack" id="tech-stack" data-anchor="tech-stack" [@fadeUp]="''">
+  <div class="section-box">
+    <header class="tech-stack__header">
+      <h3 class="section-title">
+        <span class="n-section-title">02.</span>
+        {{ 'TechStack.Title' | translate }}
+      </h3>
+      <p class="tech-stack__intro">
+        {{ 'TechStack.Subtitle' | translate }}
+      </p>
+    </header>
+
+    <div class="tech-stack__grid" [@staggerChildren]="''">
+      <article
+        *ngFor="let group of ('TechStack.Groups' | translate)"
+        class="tech-card"
+        data-3d-hover
+        [@fadeUp]="''"
+      >
+        <h4 class="tech-card__title gradient-text">{{ group.Label }}</h4>
+        <ul class="tech-card__list">
+          <li *ngFor="let tech of group.Items" class="tech-card__item">
+            <span>{{ tech }}</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

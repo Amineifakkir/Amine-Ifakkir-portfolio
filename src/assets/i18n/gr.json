@@ -1,16 +1,17 @@
 {
   "Header.Item1": "Über Mich",
-  "Header.Item2": "En Erfahrungen",
-  "Header.Item3": "Projekte",
-  "Header.Item4": "Kontakt",
+  "Header.Item2": "Tech Stack",
+  "Header.Item3": "Erfahrung",
+  "Header.Item4": "Projekte",
+  "Header.Item5": "Kontakt",
   "Header.cvBtn": "Lebenslauf",
   "Header.cvName": "CV_Jose_Hernandez_German.pdf",
 
-  "hero.pretitle": "Full-Stack Μηχανικός Neon",
-  "hero.title": "Δημιουργώ καθηλωτικές ψηφιακές εμπειρίες.",
-  "hero.subtitle": "Angular, Spring Boot και 3D animation ενώνονται για να ζωντανέψουν διαδραστικά προϊόντα.",
-  "hero.cta": "Ξεκίνησε ένα project",
-  "hero.secondary": "Δες τα πρόσφατα έργα",
+  "hero.pretitle": "Full-Stack Java & Angular Engineer",
+  "hero.title": "I build resilient platforms end to end.",
+  "hero.subtitle": "From Java and Spring Boot microservices to immersive Angular experiences, I deliver reliable, human-centred products.",
+  "hero.cta": "Start a project",
+  "hero.secondary": "Explore my stack",
 
   "Banner.Pretitle": "Hallo! Mein Name ist",
   "Banner.Description": "Ich habe <span class='underline'>3 Jahre Erfahrung</span> in der Entwicklung von Mikrodiensten, RESTful APIs, Webanwendungen, Batch-Verarbeitungssystemen, Schnittstellen und technologischen Lösungen zur Verbesserung des Webs. Ich engagiere mich für das Schreiben und Refaktorisieren von sauberem, wiederverwendbarem und skalierbarem Code mit <span class='underline'>Spring Boot</span> und <span class='underline'>Angular</span>, wobei ich bewährte Verfahren und Entwicklungsstandards einhalte.",
@@ -18,11 +19,34 @@
 
   "AboutMe.Title": "Über Mich",
   "AboutMe.Paragraphs": [
-    "Mit <span class='underline'>3 Jahren Erfahrung</span> im Bereich Softwareentwicklung habe ich verschiedenen Projekten erledigt, als <span class='underline'>Full-Stack-Entwickler</span>, <span class='underline'>Backend-Spezialist</span> und <span class='underline'>Front-End-Ingenieur</span>. Meine Leidenschaft liegt in der Schaffung robuster, skalierbarer und effizienter Lösungen, die einen spürbaren Unterschied machen.",
-    "Ich bin erfahren in der Entwicklung und Optimierung von Systemen, der Standardisierung von Programmierpraktiken und der konsequenten Bereitstellung von Mehrwert für jedes Projekt, an dem ich arbeite. Ob es darum geht, die Leistung zu verbessern, die Codequalität sicherzustellen oder komplexe Probleme zu lösen, ich strebe nach Exzellenz.",
-    "Neben meiner beruflichen Arbeit baue ich gerne persönliche Projekte, die von praktischen Werkzeugen bis hin zu experimentellen Ideen reichen. Dies ermöglicht es mir, meine Fähigkeiten kontinuierlich zu verfeinern und neue Technologien zu erkunden.",
-    "Einige der Technologien, auf die ich mich spezialisiert habe, sind (aber nicht beschränkt auf): <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span> und <span class='underline'>Mikroservices-Architektur</span>."
+    "As a <span class='underline'>full-stack Java & Angular engineer</span>, I design and ship platforms that balance clean architecture with delightful UX.",
+    "On the backend I craft <span class='underline'>Spring Boot</span> microservices, optimize SQL data models, and wire resilient integrations that scale with business needs.",
+    "On the frontend I translate complex requirements into <span class='underline'>accessible Angular apps</span>, pairing reactive state management with purposeful motion.",
+    "I thrive in collaborative, product-driven teams where code quality, observability, and continuous delivery unlock measurable impact."
   ],
+
+  "TechStack": {
+    "Title": "Tech Stack",
+    "Subtitle": "Technology choices that let me move fast without breaking reliability.",
+    "Groups": [
+      {
+        "Label": "Backend & Platform",
+        "Items": ["Java", "Spring Boot", "Hibernate", "REST & GraphQL APIs", "Micronaut", "JUnit"]
+      },
+      {
+        "Label": "Frontend & Experience",
+        "Items": ["Angular", "RxJS", "NgRx", "SCSS", "Three.js", "GSAP"]
+      },
+      {
+        "Label": "DevOps & Cloud",
+        "Items": ["Docker", "GitHub Actions", "Kubernetes", "AWS", "Azure", "SonarQube"]
+      },
+      {
+        "Label": "Databases & Messaging",
+        "Items": ["PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Kafka", "Elasticsearch"]
+      }
+    ]
+  },
 
   "Experience.Title": "Erfahrung",
   "Experience.Jobs": [
@@ -177,6 +201,7 @@
     ],
   
   "Contact.Title": "Kontakt",
+  "Contact.Btn": "Kontakt aufnehmen",
   "Contact.Social": [
     {
       "Title": "LinkedIn",
@@ -194,5 +219,6 @@
     "Subject": "Betreff",
     "Message": "Nachricht",
     "Send": "Senden"
-  }
+  },
+  "Contact.Secondary": "Connect on LinkedIn"
 }
