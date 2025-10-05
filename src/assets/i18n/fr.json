@@ -19,10 +19,10 @@
 
   "AboutMe.Title": "À propos de moi",
   "AboutMe.Paragraphs": [
-    "As a <span class='underline'>full-stack Java & Angular engineer</span>, I design and ship platforms that balance clean architecture with delightful UX.",
-    "On the backend I craft <span class='underline'>Spring Boot</span> microservices, optimize SQL data models, and wire resilient integrations that scale with business needs.",
-    "On the frontend I translate complex requirements into <span class='underline'>accessible Angular apps</span>, pairing reactive state management with purposeful motion.",
-    "I thrive in collaborative, product-driven teams where code quality, observability, and continuous delivery unlock measurable impact."
+    "En tant qu'<span class='underline'>ingénieur full-stack Java & Angular</span>, je conçois et livre des plateformes qui allient architecture soignée et expérience utilisateur mémorable.",
+    "Côté backend, je crée des microservices <span class='underline'>Spring Boot</span>, j'optimise les modèles de données SQL et je mets en place des intégrations résilientes qui évoluent avec les besoins métier.",
+    "Côté frontend, je transforme des exigences complexes en <span class='underline'>applications Angular accessibles</span>, en combinant gestion d'état réactive et animations pertinentes.",
+    "Je m'épanouis dans des équipes produit où qualité du code, observabilité et déploiement continu génèrent un impact mesurable."
   ],
 
   "TechStack": {
@@ -55,12 +55,12 @@
       "Title": "Développeur Full-Stack",
       "Date": "Octobre 2021 - Mai 2022",
       "Description": [
-        "Développement et maintenance d'applications web, d'APIs RESTful et de microservices avec Spring Boot et Angular.",
-        "Amélioration des performances système par la mise en œuvre du caching, du traitement asynchrone et de l'indexation des bases de données.",
-        "Mise en œuvre de mesures de sécurité pour protéger l'intégrité des données et la confidentialité des utilisateurs.",
-        "Utilisation de pipelines d'intégration continue et de déploiement continu (CI/CD) pour automatiser les processus de test et de déploiement.",
-        "Collaboration avec des équipes interfonctionnelles pour fournir des solutions logicielles de haute qualité.",
-        "Participation à des revues de code, du pair programming et des sessions de partage de connaissances pour améliorer la performance de l'équipe."
+        "Conception et maintenance d'applications web, d'API RESTful et de microservices avec Spring Boot et Angular.",
+        "Amélioration des performances via la mise en cache, le traitement asynchrone et l'indexation des bases de données.",
+        "Mise en place de mesures de sécurité afin de protéger l'intégrité des données et la confidentialité des utilisateurs.",
+        "Utilisation de pipelines CI/CD pour automatiser les tests et les déploiements.",
+        "Collaboration avec des équipes pluridisciplinaires pour fournir des solutions logicielles de haute qualité.",
+        "Participation aux revues de code, au pair programming et au partage de connaissances pour renforcer la cohésion d'équipe."
       ]
     },
     {
@@ -68,12 +68,12 @@
       "Title": "Freelance",
       "Date": "Mai 2022 - Présent",
       "Description": [
-        "Implémentation continue des améliorations sur les systèmes front-end et back-end, en mettant l'accent sur les performances et la qualité du code.",
-        "Développement de plateformes évolutives et robustes en utilisant Spring Boot et Angular, en appliquant la programmation fonctionnelle, réactive et orientée objet.",
-        "Automatisation des processus à travers des structures de données efficaces, amélioration de la productivité des flux de travail.",
-        "Collaboration avec les clients pour comprendre leurs besoins et fournir des solutions personnalisées.",
-        "Intégration des APIs et services externes pour étendre les capacités de la plateforme.",
-        "Assurance de l'application des meilleures pratiques en développement logiciel, y compris le contrôle de version, les tests et le déploiement."
+        "Évolution continue des systèmes front et back en privilégiant performances et qualité du code.",
+        "Développement de plateformes évolutives avec Spring Boot et Angular en combinant programmation fonctionnelle, réactive et orientée objet.",
+        "Automatisation des processus via des structures de données efficaces afin d'accroître la productivité.",
+        "Dialogue direct avec les clients pour comprendre leurs besoins et livrer des solutions sur mesure.",
+        "Intégration de services et d'API tiers pour enrichir les fonctionnalités produit.",
+        "Application systématique des bonnes pratiques : revue de code, tests automatisés et déploiements fiables."
       ]
     }
   ],
@@ -230,11 +230,13 @@
     }
   ],
 
-  "Contact.Pretitle": "Et maintenant ?",
-  "Contact.Title": "Dites bonjour !",
-  "Contact.Content": "Je serais heureux de vous entendre si vous souhaitez discuter de nouvelles opportunités. Écrivez-moi et je vous répondrai dès que je verrai votre message.",
-  "Contact.Btn": "Contactez-moi",
-  "Contact.Secondary": "Connect on LinkedIn",
+  "contact": {
+    "preTitle": "Et maintenant ?",
+    "title": "Dites bonjour !",
+    "content": "Je serais heureux de vous entendre si vous souhaitez discuter de nouvelles opportunités. Écrivez-moi et je vous répondrai dès que je verrai votre message.",
+    "cta": "Contactez-moi",
+    "secondary": "Connectez-vous sur LinkedIn"
+  },
 
   "ContactForm": {
     "Title": "Contact",

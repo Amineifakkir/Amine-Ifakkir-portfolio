@@ -97,4 +97,12 @@
   .tech-stack__intro {
     font-size: 1rem;
   }
+
+  .tech-card {
+    padding: clamp(1.4rem, 8vw, 1.9rem);
+  }
+
+  .tech-card__title {
+    font-size: 1.1rem;
+  }
 }

@@ -1,4 +1,4 @@
-<section class="section more-projects" id="more-proyects" data-anchor="projects" [@fadeUp]="''">
+<section class="section more-projects" id="projects" data-anchor="projects" [@fadeUp]="''">
   <div class="section-box">
     <header class="more-projects__header">
       <h3 class="section-title">
@@ -27,6 +27,7 @@
               [href]="project['ghLink']"
               target="_blank"
               rel="noopener"
+              aria-label="{{ project.Title }} GitHub"
               (click)="$event.stopPropagation(); analyticsService.sendAnalyticEvent('click_project_github', 'other-projects', project.Title)"
             >
               <i class="fab fa-github" aria-hidden="true"></i>
@@ -39,6 +40,7 @@
               [href]="project['demoLink']"
               target="_blank"
               rel="noopener"
+              aria-label="{{ project.Title }} Demo"
               (click)="$event.stopPropagation(); analyticsService.sendAnalyticEvent('click_project_demo', 'other-projects', project.Title)"
             >
               <i class="fas fa-external-link-alt" aria-hidden="true"></i>

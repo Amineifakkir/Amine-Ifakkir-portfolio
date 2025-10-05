@@ -1,51 +1,60 @@
 <nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]="pageYPosition > 0">
   <div class="container nav-container">
-    <a class="navbar-brand" [routerLink]="'inicio'">
+    <!-- desktop logo remains inside the island; mobile-only logo shown outside for drawers -->
+    <a class="navbar-brand mobile-only" [routerLink]="'inicio'">
       <img src="assets/images/logo.png" alt="Amine Ifakkir" />
     </a>
 
-    <div class="nav-shell">
+    <button
+      #menuToggle
+      class="hamburger"
+      type="button"
+      aria-label="Toggle menu"
+      [attr.aria-expanded]="isMenuOpen"
+      [class.open]="isMenuOpen"
+      (click)="toggleMenu()"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav
+      #navLinks
+      class="nav-links"
+      role="navigation"
+      aria-label="Primary"
+      [class.open]="isMenuOpen"
+    >
+      <a class="navbar-brand inside-island" [routerLink]="'inicio'">
+        <img src="assets/images/logo.png" alt="Amine Ifakkir" />
+      </a>
       <ul class="menu-list">
-        <li
-          class="menu-item"
-          [class.is-active]="isActive('about')"
-        >
+        <li class="menu-item" [class.is-active]="isActive('about')">
           <button type="button" (click)="analyticsService.sendAnalyticEvent('click_about', 'menu', 'click'); scroll('about')">
             <span class="menu-index">01.</span>
             <span class="menu-label">{{ 'Header.Item1' | translate }}</span>
           </button>
         </li>
-        <li
-          class="menu-item"
-          [class.is-active]="isActive('tech-stack')"
-        >
-          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_stack', 'menu', 'click'); scroll('tech-stack')">
+        <li class="menu-item" [class.is-active]="isActive('tech')">
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_stack', 'menu', 'click'); scroll('tech')">
             <span class="menu-index">02.</span>
             <span class="menu-label">{{ 'Header.Item2' | translate }}</span>
           </button>
         </li>
-        <li
-          class="menu-item"
-          [class.is-active]="isActive('jobs')"
-        >
-          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_experience', 'menu', 'click'); scroll('jobs')">
+        <li class="menu-item" [class.is-active]="isActive('experience')">
+          <button type="button" (click)="analyticsService.sendAnalyticEvent('click_experience', 'menu', 'click'); scroll('experience')">
             <span class="menu-index">03.</span>
             <span class="menu-label">{{ 'Header.Item3' | translate }}</span>
           </button>
         </li>
-        <li
-          class="menu-item"
-          [class.is-active]="isActive('projects')"
-        >
+        <li class="menu-item" [class.is-active]="isActive('projects')">
           <button type="button" (click)="analyticsService.sendAnalyticEvent('click_jobs', 'menu', 'click'); scroll('projects')">
             <span class="menu-index">04.</span>
             <span class="menu-label">{{ 'Header.Item4' | translate }}</span>
           </button>
         </li>
-        <li
-          class="menu-item"
-          [class.is-active]="isActive('contact')"
-        >
+        <li class="menu-item" [class.is-active]="isActive('contact')">
           <button type="button" (click)="analyticsService.sendAnalyticEvent('click_contact', 'menu', 'click'); scroll('contact')">
             <span class="menu-index">05.</span>
             <span class="menu-label">{{ 'Header.Item5' | translate }}</span>
@@ -84,7 +93,7 @@
             <span class="language-label" *ngIf="languageFormControl.value === 'gr'">Deutsch</span>
             <span class="language-label" *ngIf="languageFormControl.value === 'fr'">French</span>
             <svg class="language-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"></path>
             </svg>
           </button>
 
@@ -93,7 +102,7 @@
               type="button"
               class="language-option"
               [class.is-active]="languageFormControl.value === 'en'"
-              (click)="changeLanguage('en'); responsiveMenuVisible = false"
+              (click)="selectLanguage('en')"
             >
               <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English" />
               <span>English</span>
@@ -102,7 +111,7 @@
               type="button"
               class="language-option"
               [class.is-active]="languageFormControl.value === 'gr'"
-              (click)="changeLanguage('gr'); responsiveMenuVisible = false"
+              (click)="selectLanguage('gr')"
             >
               <img src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Deutsch" />
               <span>Deutsch</span>
@@ -111,7 +120,7 @@
               type="button"
               class="language-option"
               [class.is-active]="languageFormControl.value === 'fr'"
-              (click)="changeLanguage('fr'); responsiveMenuVisible = false"
+              (click)="selectLanguage('fr')"
             >
               <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French" />
               <span>French</span>
@@ -119,89 +128,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="menu-wrapper">
-      <div class="hamburger-menu" [class.animate]="responsiveMenuVisible" (click)="responsiveMenuVisible = !responsiveMenuVisible"></div>
-    </div>
+    </nav>
   </div>
 
-  <div
-    class="menu-responsive"
-    [class.aside-show]="responsiveMenuVisible"
-    [ngStyle]="{ 'pointer-events': !responsiveMenuVisible ? 'none' : '' }"
-  >
-    <aside>
-      <nav>
-        <ul class="mobile-menu">
-          <li [class.is-active]="isActive('about')">
-            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_about', 'menu', 'click'); responsiveMenuVisible = false; scroll('about')">
-              <span>01.</span>
-              {{ 'Header.Item1' | translate }}
-            </button>
-          </li>
-          <li [class.is-active]="isActive('tech-stack')">
-            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_stack', 'menu', 'click'); responsiveMenuVisible = false; scroll('tech-stack')">
-              <span>02.</span>
-              {{ 'Header.Item2' | translate }}
-            </button>
-          </li>
-          <li [class.is-active]="isActive('jobs')">
-            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_experience', 'menu', 'click'); responsiveMenuVisible = false; scroll('jobs')">
-              <span>03.</span>
-              {{ 'Header.Item3' | translate }}
-            </button>
-          </li>
-          <li [class.is-active]="isActive('projects')">
-            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_jobs', 'menu', 'click'); responsiveMenuVisible = false; scroll('projects')">
-              <span>04.</span>
-              {{ 'Header.Item4' | translate }}
-            </button>
-          </li>
-          <li [class.is-active]="isActive('contact')">
-            <button type="button" (click)="analyticsService.sendAnalyticEvent('click_contact', 'menu', 'click'); responsiveMenuVisible = false; scroll('contact')">
-              <span>05.</span>
-              {{ 'Header.Item5' | translate }}
-            </button>
-          </li>
-        </ul>
-
-        <div class="mobile-actions">
-          <button type="button" class="resume-chip" (click)="downloadCVConst(); responsiveMenuVisible = false">
-            {{ 'Header.cvBtn' | translate }}
-          </button>
-
-          <div class="mobile-language">
-            <button
-              type="button"
-              class="language-option"
-              [class.is-active]="languageFormControl.value === 'en'"
-              (click)="changeLanguage('en')"
-            >
-              <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="English" />
-              <span>English</span>
-            </button>
-            <button
-              type="button"
-              class="language-option"
-              [class.is-active]="languageFormControl.value === 'gr'"
-              (click)="changeLanguage('gr')"
-            >
-              <img src="https://www.worldometers.info/img/flags/gm-flag.gif" alt="Deutsch" />
-              <span>Deutsch</span>
-            </button>
-            <button
-              type="button"
-              class="language-option"
-              [class.is-active]="languageFormControl.value === 'fr'"
-              (click)="changeLanguage('fr')"
-            >
-              <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="French" />
-              <span>French</span>
-            </button>
-          </div>
-        </div>
-      </nav>
-    </aside>
-  </div>
+  <div class="nav-overlay" *ngIf="isMenuOpen" (click)="closeMenu()" aria-hidden="true"></div>
 </nav>

@@ -15,6 +15,8 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('heroContent', { static: true }) private contentRef!: ElementRef<HTMLDivElement>;
 
   private renderer?: THREE.WebGLRenderer;
+  // expose to template so we can show a fallback when WebGL is not available
+  public webglAvailable = true;
   private scene?: THREE.Scene;
   private camera?: THREE.PerspectiveCamera;
   private torus?: THREE.Mesh;
@@ -59,7 +61,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   }
 
   scrollToWork(): void {
-    const section = document.querySelector('[data-anchor="tech-stack"]');
+    const section = document.querySelector('[data-anchor="tech"]');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -75,11 +77,26 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
     this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
     this.camera.position.set(0, 0, 35);
 
-    this.renderer = new THREE.WebGLRenderer({
-      canvas,
-      alpha: true,
-      antialias: true,
-    });
+    // Try to create a WebGL renderer. If it fails, gracefully fallback.
+    try {
+      this.renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true,
+      });
+    } catch (err) {
+      // WebGL context couldn't be created (headless environment, blocked, or driver issues)
+      // Mark as unavailable and hide the canvas to avoid further errors.
+      // eslint-disable-next-line no-console
+      console.warn('WebGL not available, disabling 3D scene fallback.', err);
+      this.webglAvailable = false;
+      try {
+        canvas.style.display = 'none';
+      } catch (e) {
+        // ignore
+      }
+      return;
+    }
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setSize(width, height);
 
@@ -111,6 +128,11 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   }
 
   private startAnimationLoop(): void {
+    // Do not start the loop if WebGL is not available
+    if (!this.webglAvailable || !this.renderer) {
+      return;
+    }
+
     const animate = () => {
       if (!this.scene || !this.camera || !this.renderer || !this.torus) {
         return;

@@ -4,16 +4,16 @@
     <div class="contact__glow contact__glow--two" aria-hidden="true"></div>
 
     <div class="contact__card" data-3d-hover [@staggerChildren]="''">
-      <span class="contact__badge neon-badge">05. {{ 'Contact.Pretitle' | translate }}</span>
+      <span class="contact__badge neon-badge">05. {{ 'contact.preTitle' | translate }}</span>
       <h2 class="contact__title big-title" [@fadeUp]="''">
-        {{ 'Contact.Title' | translate }}
+        {{ 'contact.title' | translate }}
       </h2>
       <p class="contact__copy" [@fadeUp]="''">
-        {{ 'Contact.Content' | translate }}
+        {{ 'contact.content' | translate }}
       </p>
       <div class="contact__actions" [@fadeUp]="''">
         <button type="button" (click)="openEmail()">
-          {{ 'Contact.Btn' | translate }}
+          {{ 'contact.cta' | translate }}
         </button>
         <a
           class="contact__ghost"
@@ -21,7 +21,7 @@
           target="_blank"
           rel="noopener"
         >
-          <span>{{ 'Contact.Secondary' | translate }}</span>
+          <span>{{ 'contact.secondary' | translate }}</span>
           <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>

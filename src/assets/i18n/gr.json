@@ -19,10 +19,10 @@
 
   "AboutMe.Title": "Über Mich",
   "AboutMe.Paragraphs": [
-    "As a <span class='underline'>full-stack Java & Angular engineer</span>, I design and ship platforms that balance clean architecture with delightful UX.",
-    "On the backend I craft <span class='underline'>Spring Boot</span> microservices, optimize SQL data models, and wire resilient integrations that scale with business needs.",
-    "On the frontend I translate complex requirements into <span class='underline'>accessible Angular apps</span>, pairing reactive state management with purposeful motion.",
-    "I thrive in collaborative, product-driven teams where code quality, observability, and continuous delivery unlock measurable impact."
+    "Als <span class='underline'>Full-Stack-Entwickler für Java & Angular</span> entwerfe und liefere ich Plattformen, die saubere Architektur mit einer eindrucksvollen Nutzererfahrung verbinden.",
+    "Im Backend entwickle ich <span class='underline'>Spring-Boot</span>-Microservices, optimiere SQL-Datenmodelle und integriere belastbare Systeme, die mit den Geschäftsanforderungen wachsen.",
+    "Im Frontend übersetze ich komplexe Anforderungen in <span class='underline'>zugängliche Angular-Anwendungen</span> und kombiniere reaktive Zustandsverwaltung mit durchdachten Animationen.",
+    "Ich fühle mich in produktorientierten Teams wohl, in denen Codequalität, Observability und Continuous Delivery messbaren Mehrwert schaffen."
   ],
 
   "TechStack": {
@@ -55,12 +55,12 @@
       "Title": "Full-Stack-Entwickler",
       "Date": "Okt 2021 - Mai 2022",
       "Description": [
-        "Entwicklung und Wartung von Webanwendungen, RESTful APIs und Mikrodiensten mit Spring Boot und Angular.",
-        "Optimierung der Systemleistung durch Implementierung von Caching, asynchroner Verarbeitung und Datenbank-Indizierung.",
-        "Implementierung von Sicherheitsmaßnahmen zum Schutz der Datenintegrität und der Privatsphäre der Benutzer.",
-        "Verwendung von Continuous Integration und Continuous Deployment (CI/CD) Pipelines zur Automatisierung von Tests und Bereitstellungsprozessen.",
-        "Zusammenarbeit mit funktionsübergreifenden Teams zur Lieferung hochwertiger Softwarelösungen.",
-        "Teilnahme an Code-Reviews, Pair-Programming und Wissensaustausch-Sitzungen zur Verbesserung der Teamleistung."
+        "Entwicklung und Wartung von Webanwendungen, REST-APIs und Microservices mit Spring Boot und Angular.",
+        "Steigerung der Performance durch Caching, asynchrone Verarbeitung und Datenbankindizes.",
+        "Einführung von Sicherheitsmaßnahmen zum Schutz von Daten und Privatsphäre.",
+        "Einsatz von CI/CD-Pipelines, um Tests und Deployments zu automatisieren.",
+        "Zusammenarbeit mit interdisziplinären Teams zur Lieferung hochwertiger Softwarelösungen.",
+        "Teilnahme an Code-Reviews, Pair Programming und Wissensaustausch zur Stärkung des Teams."
       ]
     },
     {
@@ -68,12 +68,12 @@
       "Title": "Freiberufler",
       "Date": "Mai 2022 - Gegenwart",
       "Description": [
-        "Kontinuierliche Verbesserungen sowohl im Frontend als auch im Backend umsetzen, mit Fokus auf Leistungsoptimierung und Codequalität.",
-        "Entwicklung skalierbarer und robuster Plattformen mit Spring Boot und Angular, unter Verwendung funktionaler, reaktiver und objektorientierter Programmierparadigmen.",
-        "Automatisierung von Prozessen durch effiziente Datenstrukturen und Verbesserung der Workflow-Produktivität.",
-        "Zusammenarbeit mit Kunden, um deren Anforderungen zu verstehen und maßgeschneiderte Lösungen zu liefern.",
-        "Integration von Drittanbieter-APIs und -Diensten zur Erweiterung der Plattformfähigkeiten.",
-        "Sicherstellung der Verwendung bewährter Methoden in der Softwareentwicklung, einschließlich Versionskontrolle, Testen und Bereitstellung."
+        "Fortlaufende Weiterentwicklung von Front- und Backend mit Fokus auf Performance und Codequalität.",
+        "Entwicklung skalierbarer Plattformen mit Spring Boot und Angular unter Einsatz funktionaler, reaktiver und objektorientierter Konzepte.",
+        "Automatisierung von Prozessen durch effiziente Datenstrukturen zur Steigerung der Produktivität.",
+        "Direkte Zusammenarbeit mit Kund:innen, um Anforderungen zu verstehen und individuell angepasste Lösungen zu liefern.",
+        "Integration externer APIs und Services zur Erweiterung des Funktionsumfangs.",
+        "Konsequente Anwendung bewährter Praktiken wie Versionskontrolle, automatisierte Tests und verlässliche Deployments."
       ]
     }
   ],
@@ -200,6 +200,13 @@
       }
     ],
   
+  "contact": {
+    "preTitle": "Sag hallo!",
+    "title": "Kontakt",
+    "content": "Lass uns gemeinsam etwas Außergewöhnliches schaffen!",
+    "cta": "Kontakt aufnehmen",
+    "secondary": "Connect auf LinkedIn"
+  },
   "Contact.Title": "Kontakt",
   "Contact.Btn": "Kontakt aufnehmen",
   "Contact.Social": [

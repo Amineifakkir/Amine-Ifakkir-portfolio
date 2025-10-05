@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import {trigger, style, query, transition, stagger, animate } from '@angular/animations'
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
@@ -30,12 +30,19 @@ import { LanguageService } from 'src/app/services/language/language.service';
 
 export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  responsiveMenuVisible: Boolean = false;
+  isMenuOpen = false;
   pageYPosition: number;
   languageFormControl: UntypedFormControl= new UntypedFormControl();
   cvName: string = "";
   activeSection: string = '';
   private intersectionObserver?: IntersectionObserver;
+  private focusableElements: HTMLElement[] = [];
+
+  @ViewChild('menuToggle', { static: false })
+  private menuToggle?: ElementRef<HTMLButtonElement>;
+
+  @ViewChild('navLinks', { static: false })
+  private navLinks?: ElementRef<HTMLElement>;
 
   constructor(
     private router: Router,
@@ -68,12 +75,32 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
         this.activeSection = el;
       });
     }
-    this.responsiveMenuVisible=false;
+    this.closeMenu();
   }
 
   // Méthode pour vérifier si une section est active
   isActive(section: string): boolean {
     return this.activeSection === section;
+  }
+
+  toggleMenu(): void {
+    if (this.isMenuOpen) {
+      this.closeMenu();
+      return;
+    }
+
+    this.isMenuOpen = true;
+    this.setFocusableElements();
+    setTimeout(() => this.focusFirstElement(), 0);
+  }
+
+  closeMenu(): void {
+    if (!this.isMenuOpen) {
+      return;
+    }
+    this.isMenuOpen = false;
+    this.focusableElements = [];
+    setTimeout(() => this.menuToggle?.nativeElement.focus());
   }
 
   private initializeScrollSpy(): void {
@@ -130,7 +157,59 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
         this.pageYPosition=window.pageYOffset
     }
 
-    changeLanguage(language: string) {
+    selectLanguage(language: string) {
       this.languageFormControl.setValue(language);
+      this.closeMenu();
+    }
+
+    @HostListener('document:keydown', ['$event'])
+    handleKeydown(event: KeyboardEvent): void {
+      if (!this.isMenuOpen) {
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        this.closeMenu();
+        event.preventDefault();
+        return;
+      }
+
+      if (event.key !== 'Tab' || this.focusableElements.length === 0) {
+        return;
+      }
+
+      const first = this.focusableElements[0];
+      const last = this.focusableElements[this.focusableElements.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (event.shiftKey) {
+        if (active === first || !active) {
+          last.focus();
+          event.preventDefault();
+        }
+      } else if (active === last) {
+        first.focus();
+        event.preventDefault();
+      }
+    }
+
+    private setFocusableElements(): void {
+      const container = this.navLinks?.nativeElement;
+      if (!container) {
+        this.focusableElements = [];
+        return;
+      }
+
+      const selectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+      this.focusableElements = Array.from(
+        container.querySelectorAll<HTMLElement>(selectors)
+      ).filter((el) => el.offsetParent !== null);
+    }
+
+    private focusFirstElement(): void {
+      if (this.focusableElements.length === 0) {
+        return;
+      }
+      this.focusableElements[0].focus();
     }
 }

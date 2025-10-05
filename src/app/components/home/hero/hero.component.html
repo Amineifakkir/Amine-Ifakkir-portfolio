@@ -1,5 +1,7 @@
-<section class="hero" [@fadeIn] role="region" aria-labelledby="hero-heading">
+<section class="hero" id="hero" [@fadeIn] role="region" aria-labelledby="hero-heading">
   <canvas #heroCanvas class="hero__canvas" aria-hidden="true"></canvas>
+  <!-- Fallback image shown when WebGL is not available -->
+  <!-- <img *ngIf="!webglAvailable" src="assets/images/me5.webp" alt="decorative background" class="hero__fallback" aria-hidden="true" /> -->
   <div class="hero__glow hero__glow--primary" aria-hidden="true"></div>
   <div class="hero__glow hero__glow--secondary" aria-hidden="true"></div>
 
