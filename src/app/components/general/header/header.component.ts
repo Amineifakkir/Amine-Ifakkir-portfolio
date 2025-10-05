@@ -147,10 +147,25 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   downloadCVConst(){
-    let link = document.createElement ("a");
-    link. download = "Amine-IFAKKIR.pdf";
-    link.href = "assets/cv/Amine-IFAKKIR.pdf* ";
+    const lang = (this.languageFormControl.value || 'fr').toString().toLowerCase();
+    let filename = 'Amine-IFAKKIR';
+    if (lang.startsWith('en')) {
+      filename += '-ENG.pdf';
+    } else if (lang.startsWith('gr') || lang.startsWith('de')) {
+      // support 'gr' or 'de' for german
+      filename += '-gr.pdf';
+    } else {
+      // default french
+      filename += '-FR.pdf';
+    }
+
+    const link = document.createElement('a');
+    link.download = filename;
+    link.href = `assets/cv/${filename}`;
+    // for accessibility: add to DOM then click
+    document.body.appendChild(link);
     link.click();
+    link.remove();
   }
   @HostListener('window:scroll', ['getScrollPosition($event)'])
     getScrollPosition(event) {
