@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChild, HostListener, AfterViewInit } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import {trigger, style, query, transition, stagger, animate } from '@angular/animations'
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { TranslateService } from '@ngx-translate/core';
 import { UntypedFormControl } from '@angular/forms';
 import { LanguageService } from 'src/app/services/language/language.service';
-import { ThisReceiver } from '@angular/compiler';
 
 
 @Component({
@@ -30,13 +28,14 @@ import { ThisReceiver } from '@angular/compiler';
 
 
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number;
   languageFormControl: UntypedFormControl= new UntypedFormControl();
   cvName: string = "";
   activeSection: string = '';
+  private intersectionObserver?: IntersectionObserver;
 
   constructor(
     private router: Router,
@@ -47,47 +46,64 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
     this.languageFormControl.setValue(this.languageService.language)
-    
-    // Initialiser la détection de section active
-    this.checkActiveSection();
+  }
+
+  ngAfterViewInit(): void {
+    this.initializeScrollSpy();
+  }
+
+  ngOnDestroy(): void {
+    this.intersectionObserver?.disconnect();
   }
 
   scroll(el) {
-    if(document.getElementById(el)) {
-      document.getElementById(el).scrollIntoView({behavior: 'smooth'});
-      this.activeSection = el; // Mettre à jour la section active
+    const target = document.querySelector(`[data-anchor="${el}"]`) as HTMLElement || document.getElementById(el);
+    if(target) {
+      target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      this.activeSection = el;
     } else{
-      this.router.navigate(['/home']).then(()=> document.getElementById(el).scrollIntoView({behavior: 'smooth'}) );
-      this.activeSection = el; // Mettre à jour la section active
+      this.router.navigate(['/home']).then(()=> {
+        const fallback = document.querySelector(`[data-anchor="${el}"]`) as HTMLElement || document.getElementById(el);
+        fallback?.scrollIntoView({behavior: 'smooth', block: 'start'});
+        this.activeSection = el;
+      });
     }
     this.responsiveMenuVisible=false;
-  }
-
-  // Méthode pour vérifier la section active en fonction du défilement
-  checkActiveSection() {
-    const sections = ['about', 'jobs', 'more-proyects', 'contact'];
-    
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY + 100; // Ajouter une marge pour la navbar
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            this.activeSection = section;
-            break;
-          }
-        }
-      }
-    });
   }
 
   // Méthode pour vérifier si une section est active
   isActive(section: string): boolean {
     return this.activeSection === section;
+  }
+
+  private initializeScrollSpy(): void {
+    const targets = Array.from(document.querySelectorAll<HTMLElement>('[data-anchor]'));
+    if (!targets.length) {
+      return;
+    }
+
+    this.intersectionObserver?.disconnect();
+    this.intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          const anchor = visible[0].target.getAttribute('data-anchor');
+          if (anchor) {
+            this.activeSection = anchor;
+          }
+        }
+      },
+      {
+        root: null,
+        threshold: [0.25, 0.5, 0.75],
+        rootMargin: '-120px 0px -40px 0px'
+      }
+    );
+
+    targets.forEach((section) => this.intersectionObserver?.observe(section));
   }
 
   downloadCV(){

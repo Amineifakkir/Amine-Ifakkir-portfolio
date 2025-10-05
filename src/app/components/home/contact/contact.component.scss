@@ -1,126 +1,120 @@
 @import "./../../../../variables.scss";
 
-.contact {
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
-    min-height: 100vh;
-    display: table;
-    position: relative;
-    
-    // Background gradient
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, rgba(17, 34, 64, 0.5) 0%, rgba(10, 25, 47, 0) 70%);
-        z-index: 0;
-    }
-
-    .container {
-        display: table-cell;
-        vertical-align: middle;
-        position: relative;
-        z-index: 1;
-    }
-
-    .section-box {
-        padding: 120px 0;
-    }
-
-    .contact-title {
-        position: relative;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        font-size: 70px; // Larger font
-        font-weight: 700; // Bolder
-        color: $White; // Increased contrast
-        margin: auto;
-        width: fit-content;
-        letter-spacing: -1px;
-        margin-bottom: 25px;
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Subtle shadow for depth
-    }
-    
-    .contact-pre-title {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 20px;
-        width: 100%;
-        font-size: 20px; // Larger
-        color: $Green;
-        font-family: $CodeFont;
-        font-weight: normal;
-        text-align: center;
-    }
-    
-    p {
-        color: $LightestSlate;
-        font-size: 1.1rem;
-        line-height: 1.7;
-        margin-bottom: 40px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    // Enhanced button styling
-    .main-btn {
-        padding: 1.35rem 2.5rem;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 5px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(100, 255, 218, 0.05));
-        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
-        
-        &:hover {
-            transform: translateY(-5px);
-            background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(100, 255, 218, 0.1));
-            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(100, 255, 218, 0.3);
-        }
-        
-        &:active {
-            transform: translateY(-2px);
-        }
-    }
+:host {
+  display: block;
 }
 
-@media (max-width: 768px) {
-    .contact {
-        min-height: 80vh;
-        padding: 0 !important;
-        margin: 0 auto !important;
-        
-        .contact-title {
-            font-size: 50px; // Smaller on mobile
-        }
-        
-        .contact-pre-title {
-            font-size: 18px;
-        }
-    }
+.contact__box {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+  text-align: center;
 }
 
-@media (max-width: 768px){
-    
-    .contact{
-        height: 100vh;
-        padding: 0 !important;
-        margin: 0 auto !important;
-        display: table;
+.contact__glow {
+  position: absolute;
+  width: clamp(260px, 36vw, 420px);
+  height: clamp(260px, 36vw, 420px);
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+}
 
-        .container{
-            display: table-cell;
-            vertical-align: middle;
-        }
-    }
+.contact__glow--one {
+  top: 0;
+  left: 12%;
+  background: radial-gradient(circle, rgba(0, 255, 224, 0.4), transparent 70%);
+}
+
+.contact__glow--two {
+  bottom: 0;
+  right: 10%;
+  background: radial-gradient(circle, rgba(255, 107, 203, 0.35), transparent 72%);
+}
+
+.contact__card {
+  background: linear-gradient(150deg, rgba(19, 24, 35, 0.92), rgba(10, 12, 20, 0.88));
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(0, 255, 224, 0.16);
+  box-shadow: 0 30px 60px rgba(1, 3, 12, 0.55);
+  padding: clamp(2.8rem, 6vw, 3.8rem);
+  display: grid;
+  gap: clamp(1.5rem, 5vw, 2.4rem);
+  max-width: min(640px, 92vw);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__card::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: inherit;
+  border: 1px solid rgba(0, 255, 224, 0.12);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.contact__badge {
+  justify-self: center;
+}
+
+.contact__title {
+  margin: 0;
+}
+
+.contact__copy {
+  margin: 0 auto;
+  max-width: 52ch;
+  color: rgba(233, 236, 242, 0.75);
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.1rem + 0.2vw, 1.2rem);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact__ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 255, 224, 0.18);
+  background: rgba(4, 9, 16, 0.75);
+  color: var(--accent1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.contact__ghost:hover,
+.contact__ghost:focus {
+  color: var(--accent2);
+  border-color: rgba(255, 107, 203, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(255, 107, 203, 0.35);
+}
+
+@media (max-width: 600px) {
+  .contact__card {
+    padding: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .contact__actions {
+    flex-direction: column;
+  }
+
+  .contact__ghost,
+  .contact__actions button {
+    width: 100%;
+    justify-content: center;
+  }
 }

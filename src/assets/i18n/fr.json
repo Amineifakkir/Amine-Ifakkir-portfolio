@@ -6,6 +6,12 @@
   "Header.cvBtn": "CV",
   "Header.cvName": "CV_Jose_Hernandez_French.pdf",
 
+  "hero.pretitle": "Ingénieur Full-Stack néon",
+  "hero.title": "Je crée des expériences numériques immersives.",
+  "hero.subtitle": "Angular, Spring Boot et l'animation 3D fusionnent pour donner vie à des produits interactifs.",
+  "hero.cta": "Lancer un projet",
+  "hero.secondary": "Découvrir mes projets",
+
   "Banner.Pretitle": "Bonjour ! Je m'appelle",
   "Banner.Description": "J'ai <span class='underline'>3 ans d'expérience</span> dans le développement de microservices, d'APIs RESTful, d'applications web, de traitement par lots et de solutions technologiques axées sur le web. Je suis engagé dans l'écriture et la restructuration de code propre, réutilisable et évolutif avec <span class='underline'>Spring Boot</span> et <span class='underline'>Angular</span>, tout en suivant les meilleures pratiques et les normes de développement.",
   "Banner.ActionBtn": "Dites bonjour",
