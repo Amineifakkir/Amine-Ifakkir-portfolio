@@ -21,6 +21,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   private camera?: THREE.PerspectiveCamera;
   private torus?: THREE.Mesh;
   private animationId?: number;
+  private clock = new THREE.Clock();
+  private pointer = new THREE.Vector2(0, 0);
+  private readonly pointerHandler = (event: PointerEvent) => this.handlePointerMove(event);
 
   private readonly handleResize = () => {
     if (!this.camera || !this.renderer) {
@@ -37,7 +40,10 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.setupScene();
-    this.startAnimationLoop();
+    if (this.webglAvailable) {
+      this.startAnimationLoop();
+      window.addEventListener('pointermove', this.pointerHandler, { passive: true });
+    }
     this.animateContent();
     window.addEventListener('resize', this.handleResize, { passive: true });
     this.handleResize();
@@ -45,6 +51,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.handleResize);
+    if (this.webglAvailable) {
+      window.removeEventListener('pointermove', this.pointerHandler);
+    }
     if (this.animationId) {
       cancelAnimationFrame(this.animationId);
     }
@@ -137,8 +146,19 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
       if (!this.scene || !this.camera || !this.renderer || !this.torus) {
         return;
       }
-      this.torus.rotation.x += 0.01;
-      this.torus.rotation.y += 0.008;
+      const elapsed = this.clock.getElapsedTime();
+      const pointerInfluenceX = this.pointer.x * 0.5;
+      const pointerInfluenceY = this.pointer.y * 0.5;
+
+      this.torus.rotation.x = elapsed * 0.32 + pointerInfluenceY;
+      this.torus.rotation.y = elapsed * 0.26 + pointerInfluenceX;
+      this.torus.rotation.z = elapsed * 0.18;
+      this.torus.position.x = THREE.MathUtils.lerp(this.torus.position.x, pointerInfluenceX * 7.5, 0.08);
+      this.torus.position.y = THREE.MathUtils.lerp(this.torus.position.y, pointerInfluenceY * 5.5, 0.08);
+
+      this.camera.position.x = THREE.MathUtils.lerp(this.camera.position.x, pointerInfluenceX * 6, 0.06);
+      this.camera.position.y = THREE.MathUtils.lerp(this.camera.position.y, pointerInfluenceY * 4, 0.06);
+      this.camera.lookAt(0, 0, 0);
       this.animationId = requestAnimationFrame(animate);
       this.renderer.render(this.scene, this.camera);
     };
@@ -168,5 +188,12 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
         delay: 0.2,
       }
     );
+  }
+
+  private handlePointerMove(event: PointerEvent): void {
+    const halfWidth = window.innerWidth / 2;
+    const halfHeight = window.innerHeight / 2;
+    this.pointer.x = (event.clientX - halfWidth) / halfWidth;
+    this.pointer.y = (halfHeight - event.clientY) / halfHeight;
   }
 }

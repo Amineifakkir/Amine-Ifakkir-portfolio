@@ -1,10 +1,10 @@
 <section class="section more-projects" id="projects" data-anchor="projects" [@fadeUp]="''">
   <div class="section-box">
     <header class="more-projects__header">
-      <h3 class="section-title">
+      <h2 class="section-title">
         <span class="n-section-title">04.</span>
         {{ 'OtherProjects.Title' | translate }}
-      </h3>
+      </h2>
     </header>
 
     <div class="more-projects__grid" [@staggerChildren]="''">
@@ -12,6 +12,8 @@
         *ngFor="let project of 'OtherProjects.Projects' | translate"
         class="project-card"
         data-3d-hover
+        [appTilt3d]="7"
+        [appTilt3dScale]="1.03"
         [@fadeUp]="''"
         (click)="redirect(project['demoLink'] || project['ghLink'], $event)"
       >

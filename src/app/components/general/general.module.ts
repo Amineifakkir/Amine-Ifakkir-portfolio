@@ -8,6 +8,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SharedModule } from '../../shared/shared.module';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(http: HttpClient){
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-    })
+    }),
+    SharedModule
   ],
   exports: [HeaderComponent, FooterComponent]
 })

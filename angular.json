@@ -29,7 +29,9 @@
                             "src/logo.png",
                             "src/assets",
                             "src/manifest.webmanifest",
-                            "src/.htaccess"
+                            "src/.htaccess",
+                            "src/robots.txt",
+                            "src/sitemap.xml"
                         ],
                         "styles": [
                             "node_modules/@fortawesome/fontawesome-free/css/all.css",
