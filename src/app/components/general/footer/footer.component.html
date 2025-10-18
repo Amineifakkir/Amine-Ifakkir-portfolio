@@ -1,20 +1,37 @@
-<footer>
+<footer aria-label="Site footer">
     <div [@animateFooter]>
-        <ul class="footer-left-bar d-none d-md-block">
+        <ul class="footer-left-bar d-none d-md-block" aria-label="Follow Amine Ifakkir">
             <li>
-                <a (click)='analyticsService.sendAnalyticEvent("click_github", "footer", "github")' href="https://github.com/Amineifakkir" target='_blank'>
-                    <i class="fab fa-github"></i>
+                <a
+                    (click)='analyticsService.sendAnalyticEvent("click_github", "footer", "github")'
+                    href="https://github.com/Amineifakkir"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    aria-label="GitHub profile"
+                >
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
-                <a (click)='analyticsService.sendAnalyticEvent("click_linkedin", "footer", "github")' href="https://www.linkedin.com/in/amine-ifakkir-219094176/" target='_blank'>
-                    <i class="fab fa-linkedin-in"></i>
+                <a
+                    (click)='analyticsService.sendAnalyticEvent("click_linkedin", "footer", "linkedin")'
+                    href="https://www.linkedin.com/in/amine-ifakkir-219094176/"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn profile"
+                >
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                 </a>
             </li>
         </ul>
-        <div class="footer-right-bar d-none d-md-block">
-            <a (click)='analyticsService.sendAnalyticEvent("click_send_mail", "footer", "email")' href="mailto:amineifakkir@hotmail.com" target='_blank'>amineifakkir&#64;hotmail.com </a>
-        </div>
+        <address class="footer-right-bar d-none d-md-block" aria-label="Email Amine Ifakkir">
+            <a
+                (click)='analyticsService.sendAnalyticEvent("click_send_mail", "footer", "email")'
+                href="mailto:amineifakkir@hotmail.com"
+            >
+                amineifakkir&#64;hotmail.com
+            </a>
+        </address>
     </div>
 
     <div class="footer-credits text-center" >

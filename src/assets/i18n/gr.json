@@ -7,6 +7,14 @@
   "Header.cvBtn": "Lebenslauf",
   "Header.cvName": "CV_Jose_Hernandez_German.pdf",
 
+  "Seo": {
+    "title": "Amine Ifakkir | Full-Stack Java- & Angular-Entwickler",
+    "description": "Amine Ifakkir ist ein Full-Stack-Entwickler, der belastbare Lösungen mit Java, Spring Boot und Angular realisiert und skalierbare Cloud-Produkte für internationale Teams liefert.",
+    "keywords": "Amine Ifakkir, Full-Stack-Entwickler, Java-Ingenieur, Spring-Boot-Berater, Angular-Experte, Freelance-Entwickler, Cloud-Architekt",
+    "siteName": "Portfolio von Amine Ifakkir",
+    "ogLocale": "de_DE"
+  },
+
   "hero.pretitle": "Full-Stack Java & Angular Engineer",
   "hero.title": "I build resilient platforms end to end.",
   "hero.subtitle": "From Java and Spring Boot microservices to immersive Angular experiences, I deliver reliable, human-centred products.",

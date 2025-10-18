@@ -1,10 +1,10 @@
 <section class="section about" id="about" data-anchor="about" [@fadeUp]="''">
   <div class="section-box">
     <header class="about__header">
-      <h3 class="section-title">
+      <h2 class="section-title">
         <span class="n-section-title">01.</span>
         {{ 'AboutMe.Title' | translate }}
-      </h3>
+      </h2>
     </header>
 
     <div class="about__grid" [@staggerChildren]="''">
@@ -39,6 +39,8 @@
             class="about__img"
             src="assets/images/aboutme_pic.HEIC"
             alt="Amine Ifakkir portrait"
+            loading="lazy"
+            decoding="async"
             (error)="handleImageError($event)"
           />
           <span class="about__ring" aria-hidden="true"></span>
