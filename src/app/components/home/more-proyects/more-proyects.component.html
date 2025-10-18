@@ -12,6 +12,8 @@
         *ngFor="let project of 'OtherProjects.Projects' | translate"
         class="project-card"
         data-3d-hover
+        [appTilt3d]="7"
+        [appTilt3dScale]="1.03"
         [@fadeUp]="''"
         (click)="redirect(project['demoLink'] || project['ghLink'], $event)"
       >

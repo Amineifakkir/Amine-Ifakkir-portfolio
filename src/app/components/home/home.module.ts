@@ -14,6 +14,7 @@ import { NgbModule, NgbNav, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { SharedModule } from '../../shared/shared.module';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,6 +38,7 @@ export function HttpLoaderFactory(http: HttpClient){
     CommonModule,
     NgbNavModule,
     CarouselModule,
+    SharedModule,
     TranslateModule.forChild({
       loader: {
           provide: TranslateLoader,

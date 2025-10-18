@@ -1,14 +1,21 @@
-<app-header></app-header>
-<div *ngIf="isLoading" class="preloader">
-    <div class="pyramid-loader">
-        <div class="wrapper">
-          <span class="side side1"></span>
-          <span class="side side2"></span>
-          <span class="side side3"></span>
-          <span class="side side4"></span>
-          <span class="shadow"></span>
-        </div>  
+<div class="app-shell">
+  <app-three-background class="app-background"></app-three-background>
+  <div class="app-content">
+    <app-header></app-header>
+    <div *ngIf="isLoading" class="preloader">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+              <span class="side side1"></span>
+              <span class="side side2"></span>
+              <span class="side side3"></span>
+              <span class="side side4"></span>
+              <span class="shadow"></span>
+            </div>  
+          </div>
       </div>
+    <main class="app-main">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
   </div>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+</div>

@@ -15,6 +15,8 @@
         *ngFor="let group of ('TechStack.Groups' | translate)"
         class="tech-card"
         data-3d-hover
+        [appTilt3d]="9"
+        [appTilt3dScale]="1.03"
         [@fadeUp]="''"
       >
         <h4 class="tech-card__title gradient-text">{{ group.Label }}</h4>

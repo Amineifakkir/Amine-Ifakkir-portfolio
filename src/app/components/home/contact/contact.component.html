@@ -3,7 +3,7 @@
     <div class="contact__glow contact__glow--one" aria-hidden="true"></div>
     <div class="contact__glow contact__glow--two" aria-hidden="true"></div>
 
-    <div class="contact__card" data-3d-hover [@staggerChildren]="''">
+    <div class="contact__card" data-3d-hover [@staggerChildren]="''" [appTilt3d]="8" [appTilt3dScale]="1.04">
       <span class="contact__badge neon-badge">05. {{ 'contact.preTitle' | translate }}</span>
       <h2 class="contact__title big-title" [@fadeUp]="''">
         {{ 'contact.title' | translate }}
