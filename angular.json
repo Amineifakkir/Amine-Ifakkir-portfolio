@@ -19,7 +19,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/andresjosehr-portfolio",
+                        "outputPath": "dist/andresjosehr-portfolio/browser",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -145,6 +145,69 @@
                             "devServerTarget": "andresjosehr-portfolio:serve:production"
                         }
                     }
+                },
+                "server": {
+                  "builder": "@angular-devkit/build-angular:server",
+                  "options": {
+                    "outputPath": "dist/andresjosehr-portfolio/server",
+                    "main": "server.ts",
+                    "tsConfig": "tsconfig.server.json",
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "sourceMap": true,
+                    "extractLicenses": false,
+                    "vendorChunk": true
+                  },
+                  "configurations": {
+                    "production": {
+                      "buildOptimizer": true,
+                      "outputHashing": "media",
+                      "fileReplacements": [
+                        {
+                          "replace": "src/environments/environment.ts",
+                          "with": "src/environments/environment.prod.ts"
+                        }
+                      ],
+                      "optimization": true,
+                      "sourceMap": false,
+                      "extractLicenses": true,
+                      "vendorChunk": false
+                    }
+                  },
+                  "defaultConfiguration": "production"
+                },
+                "serve-ssr": {
+                  "builder": "@angular-devkit/build-angular:ssr-dev-server",
+                  "configurations": {
+                    "development": {
+                      "browserTarget": "andresjosehr-portfolio:build:development",
+                      "serverTarget": "andresjosehr-portfolio:server:development"
+                    },
+                    "production": {
+                      "browserTarget": "andresjosehr-portfolio:build:production",
+                      "serverTarget": "andresjosehr-portfolio:server:production"
+                    }
+                  },
+                  "defaultConfiguration": "development"
+                },
+                "prerender": {
+                  "builder": "@angular-devkit/build-angular:prerender",
+                  "options": {
+                    "routes": [
+                      "/"
+                    ]
+                  },
+                  "configurations": {
+                    "production": {
+                      "browserTarget": "andresjosehr-portfolio:build:production",
+                      "serverTarget": "andresjosehr-portfolio:server:production"
+                    },
+                    "development": {
+                      "browserTarget": "andresjosehr-portfolio:build:development",
+                      "serverTarget": "andresjosehr-portfolio:server:development"
+                    }
+                  },
+                  "defaultConfiguration": "production"
                 }
             }
         }
