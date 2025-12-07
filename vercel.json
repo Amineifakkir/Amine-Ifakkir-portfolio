@@ -6,14 +6,15 @@
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "angular",
   "functions": {
-    "server.ts": {
-      "runtime": "nodejs20.x"
+    "api/server.ts": {
+      "runtime": "nodejs20.x",
+      "includeFiles": "dist/**"
     }
   },
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/server.ts"
+      "source": "/((?!assets|.*\\.(js|css|woff|woff2|ttf|eot|png|jpg|jpeg|gif|svg|ico|webp|xml|txt|json|webmanifest)).*)",
+      "destination": "/api/server"
     }
   ],
   "headers": [
