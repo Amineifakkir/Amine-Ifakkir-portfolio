@@ -58,6 +58,14 @@ export class AppComponent implements OnInit {
       this.applySeoForLanguage(event.lang as SupportedLanguage);
     });
 
+    // Update breadcrumbs on route changes
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const currentLang = (this.translateService.currentLang || 'en') as SupportedLanguage;
+        this.updateBreadcrumbs(currentLang);
+      }
+    });
+
     AOS.init();
   }
 
@@ -209,13 +217,61 @@ export class AppComponent implements OnInit {
         'Angular',
         'Microservices',
         'Cloud Architecture',
-        'DevOps'
+        'DevOps',
+        'REST APIs',
+        'PostgreSQL',
+        'MongoDB',
+        'Docker',
+        'Kubernetes',
+        'AWS',
+        'Azure'
       ],
       knowsLanguage: this.supportedLanguages.map(code => (code === 'gr' ? 'de' : code)),
       inLanguage: normalizedLang,
       address: {
         '@type': 'PostalAddress',
-        addressCountry: 'MA'
+        addressCountry: 'MA',
+        addressRegion: 'Morocco'
+      },
+      areaServed: [
+        {
+          '@type': 'Country',
+          name: 'Morocco'
+        },
+        {
+          '@type': 'Country',
+          name: 'Germany'
+        }
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Software Development Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Java Development',
+              description: 'Enterprise Java application development with Spring Boot'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Full-Stack Development',
+              description: 'End-to-end web application development with Java and Angular'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Angular Development',
+              description: 'Modern Angular applications with RxJS and best practices'
+            }
+          }
+        ]
       }
     };
 
@@ -224,6 +280,47 @@ export class AppComponent implements OnInit {
 
   private updateMetaTag(attribute: 'name' | 'property', key: string, value: string): void {
     this.metaService.updateTag({ [attribute]: key, content: value });
+  }
+
+  private updateBreadcrumbs(lang: SupportedLanguage): void {
+    const breadcrumbsId = 'structured-data-breadcrumbs';
+    let script = this.document.getElementById(breadcrumbsId) as HTMLScriptElement | null;
+    
+    if (!script) {
+      script = this.renderer.createElement('script');
+      script.id = breadcrumbsId;
+      script.type = 'application/ld+json';
+      this.renderer.appendChild(this.document.head, script);
+    }
+
+    const baseUrl = this.getBaseUrl();
+    const langPath = lang === 'en' ? '/en' : `/${lang}`;
+    const currentPath = this.router.url;
+    const isProjectsPage = currentPath.includes('/proyectos');
+
+    const breadcrumbs = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${baseUrl}${langPath}`
+        }
+      ]
+    };
+
+    if (isProjectsPage) {
+      breadcrumbs.itemListElement.push({
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: `${baseUrl}${langPath}/proyectos`
+      });
+    }
+
+    script.textContent = JSON.stringify(breadcrumbs);
   }
 
   private buildUrlForLang(lang: SupportedLanguage): string {

@@ -8,29 +8,29 @@
   "Header.cvName": "CV_Jose_Hernandez_German.pdf",
 
   "Seo": {
-    "title": "Amine Ifakkir | Full-Stack Java- & Angular-Entwickler",
-    "description": "Amine Ifakkir ist ein Full-Stack-Entwickler, der belastbare Lösungen mit Java, Spring Boot und Angular realisiert und skalierbare Cloud-Produkte für internationale Teams liefert.",
-    "keywords": "Amine Ifakkir, Full-Stack-Entwickler, Java-Ingenieur, Spring-Boot-Berater, Angular-Experte, Freelance-Entwickler, Cloud-Architekt",
-    "siteName": "Portfolio von Amine Ifakkir",
+    "title": "Amine Ifakkir | Full-Stack Java- & Angular-Entwickler | Deutschland & Marokko",
+    "description": "Amine Ifakkir ist ein Full-Stack Java- und Angular-Entwickler, spezialisiert auf Spring Boot, Microservices und Cloud-native Lösungen. Verfügbar für Projekte in Deutschland und Marokko. Experte für Enterprise Java-Entwicklung, REST-APIs und moderne Webanwendungen.",
+    "keywords": "Amine Ifakkir, Full-Stack-Entwickler, Java-Entwickler, Full-Stack-Entwickler Deutschland, Java-Entwickler Marokko, Full-Stack-Entwickler Marokko, Java-Ingenieur, Spring-Boot-Entwickler, Spring-Boot-Experte, Angular-Entwickler, Microservices-Entwickler, Cloud-Entwickler, Freelance-Java-Entwickler, Freelance-Full-Stack-Entwickler, Java-Angular-Entwickler, Backend-Entwickler, Frontend-Entwickler, Software-Ingenieur, Web-Entwickler, Enterprise-Java-Entwickler, REST-API-Entwickler, DevOps-Ingenieur, Spring-Boot-Berater, Angular-Experte, Cloud-Architekt, Java Entwickler Deutschland, Full Stack Entwickler Deutschland",
+    "siteName": "Portfolio von Amine Ifakkir - Full-Stack Java- & Angular-Entwickler",
     "ogLocale": "de_DE"
   },
 
-  "hero.pretitle": "Full-Stack Java & Angular Engineer",
-  "hero.title": "I build resilient platforms end to end.",
-  "hero.subtitle": "From Java and Spring Boot microservices to immersive Angular experiences, I deliver reliable, human-centred products.",
+  "hero.pretitle": "Full-Stack Java- & Angular-Entwickler",
+  "hero.title": "Java- & Angular-Entwickler | Verfügbar in Deutschland & Marokko",
+  "hero.subtitle": "Experte für Full-Stack-Entwicklung, spezialisiert auf Java, Spring Boot und Angular. Entwicklung von Unternehmensanwendungen, Microservices und modernen Web-Lösungen für internationale Kunden.",
   "hero.cta": "Start a project",
   "hero.secondary": "Explore my stack",
 
   "Banner.Pretitle": "Hallo! Mein Name ist",
-  "Banner.Description": "Ich habe <span class='underline'>3 Jahre Erfahrung</span> in der Entwicklung von Mikrodiensten, RESTful APIs, Webanwendungen, Batch-Verarbeitungssystemen, Schnittstellen und technologischen Lösungen zur Verbesserung des Webs. Ich engagiere mich für das Schreiben und Refaktorisieren von sauberem, wiederverwendbarem und skalierbarem Code mit <span class='underline'>Spring Boot</span> und <span class='underline'>Angular</span>, wobei ich bewährte Verfahren und Entwicklungsstandards einhalte.",
+  "Banner.Description": "Ich bin ein <span class='underline'>Full-Stack Java- und Angular-Entwickler</span> mit <span class='underline'>mehr als 3 Jahren Erfahrung</span> im Aufbau von Unternehmensanwendungen, Microservices und RESTful APIs. Spezialisiert auf <span class='underline'>Spring Boot</span> und <span class='underline'>Angular</span>, liefere ich skalierbare Cloud-native Lösungen für Kunden in <span class='underline'>Deutschland</span> und <span class='underline'>Marokko</span>. Verfügbar für Freelance-Projekte und Remote-Zusammenarbeit.",
   "Banner.ActionBtn": "Hallo sagen",
 
   "AboutMe.Title": "Über Mich",
   "AboutMe.Paragraphs": [
-    "Als <span class='underline'>Full-Stack-Entwickler für Java & Angular</span> entwerfe und liefere ich Plattformen, die saubere Architektur mit einer eindrucksvollen Nutzererfahrung verbinden.",
-    "Im Backend entwickle ich <span class='underline'>Spring-Boot</span>-Microservices, optimiere SQL-Datenmodelle und integriere belastbare Systeme, die mit den Geschäftsanforderungen wachsen.",
-    "Im Frontend übersetze ich komplexe Anforderungen in <span class='underline'>zugängliche Angular-Anwendungen</span> und kombiniere reaktive Zustandsverwaltung mit durchdachten Animationen.",
-    "Ich fühle mich in produktorientierten Teams wohl, in denen Codequalität, Observability und Continuous Delivery messbaren Mehrwert schaffen."
+    "Ich bin ein <span class='underline'>Full-Stack Java- und Angular-Entwickler</span> mit Expertise im Aufbau von Unternehmensanwendungen und skalierbaren Web-Lösungen. Verfügbar für Projekte in <span class='underline'>Deutschland</span> und <span class='underline'>Marokko</span>, spezialisiere ich mich auf die Lieferung hochwertiger Software für internationale Kunden.",
+    "Meine Backend-Expertise umfasst die Entwicklung von <span class='underline'>Spring Boot</span>-Microservices, das Design von RESTful APIs, die Optimierung der Datenbankleistung mit PostgreSQL und MongoDB sowie die Implementierung von Cloud-native Lösungen auf AWS und Azure.",
+    "Im Frontend baue ich moderne <span class='underline'>Angular-Anwendungen</span> mit RxJS, TypeScript und responsiven Design-Prinzipien. Ich konzentriere mich auf die Erstellung intuitiver Benutzererfahrungen bei gleichzeitiger Wartung von sauberem, wartbarem Code.",
+    "Mit Erfahrung in DevOps-Praktiken einschließlich Docker, Kubernetes und CI/CD-Pipelines stelle ich zuverlässige Bereitstellungen und skalierbare Architekturen sicher. Ich bin leidenschaftlich daran interessiert, sauberen Code zu schreiben, Best Practices zu befolgen und kontinuierlich neue Technologien zu erlernen."
   ],
 
   "TechStack": {
