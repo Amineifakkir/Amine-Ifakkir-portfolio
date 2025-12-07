@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://amineifakkir.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amineifakkir.com/"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/en</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amineifakkir.com/"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/fr</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amineifakkir.com/"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/gr</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amineifakkir.com/"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/en/proyectos</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr/proyectos"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/fr/proyectos</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr/proyectos"/>
+  </url>
+  <url>
+    <loc>https://amineifakkir.com/gr/proyectos</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amineifakkir.com/en/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amineifakkir.com/fr/proyectos"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://amineifakkir.com/gr/proyectos"/>
+  </url>
+</urlset>

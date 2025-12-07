@@ -2,9 +2,9 @@
     <div class="container">
         <div class="section-box">
             <div data-aos="fade-up" data-aos-duration="1000">
-                <h3 class="section-title">
+                <h2 class="section-title">
                     <span class='n-section-title'>03.</span> {{"FeatureProjects.Title" | translate}}
-                </h3>
+                </h2>
             </div>
 
             <div *ngFor='let project of "FeatureProjects.Projects" | translate; let i = index' class="d-flex proyect-container" data-aos="fade-up" data-aos-duration="1000">
@@ -12,7 +12,7 @@
                     <ng-container *ngFor="let img of project.imgs">
                         <ng-template carouselSlide [id]="project.Title+slide+i">
                             <div #imgContainer class='img-container'>
-                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title">
+                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title" loading="lazy" decoding="async">
                             </div>
                         </ng-template>
                     </ng-container>
@@ -20,7 +20,7 @@
                 <div class="img-feature-proyect-container" data-aos="fade-up" data-aos-duration="1000" *ngIf="i%2==0">
                     <div class="img-feature-proyect-box">
                         <div class="img-container" style='width: auto;'>
-                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'>
+                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px' loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,26 @@
                             </li>
                         </ul>
                         <div [class.text-right]='i%2==0' [class.text-left]='i%2!=0' class="proyect-links">
-                            <a *ngIf="project['ghLink']" style='color: inherit' [href]="project['ghLink']" target="_blank"><i class="ml-3 fab fa-github"></i></a>
-                            <a *ngIf="project['demoLink']" style='color: inherit' [href]="project['demoLink']" target="_blank"><i class="ml-3 fas fa-external-link-alt"></i></a>
+                            <a
+                                *ngIf="project['ghLink']"
+                                style='color: inherit'
+                                [href]="project['ghLink']"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="{{ project.Title }} GitHub"
+                            >
+                                <i class="ml-3 fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a
+                                *ngIf="project['demoLink']"
+                                style='color: inherit'
+                                [href]="project['demoLink']"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="{{ project.Title }} Demo"
+                            >
+                                <i class="ml-3 fas fa-external-link-alt" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +66,7 @@
                     <ng-container *ngFor="let img of project.imgs">
                         <ng-template carouselSlide [id]="project.Title+slide+i">
                             <div class='img-container'>
-                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title">
+                                <img class='img-feature-proyect rounded' [src]="img" [alt]="project.Title" loading="lazy" decoding="async">
                             </div>
                         </ng-template>
                     </ng-container>
@@ -56,7 +74,7 @@
                 <div class="img-feature-proyect-container" data-aos="fade-up" data-aos-duration="1000" *ngIf="i%2!=0">
                     <div class="img-feature-proyect-box">
                         <div class="img-container" style='width: auto;'>
-                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px'>
+                            <img class='img-feature-proyect rounded' [src]="project.imgs[0]" [alt]="project.imgs[0]" width='600px' loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>

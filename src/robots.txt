@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Allow: /en
+Allow: /fr
+Allow: /gr
+Allow: /en/proyectos
+Allow: /fr/proyectos
+Allow: /gr/proyectos
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
+Sitemap: https://amineifakkir.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1

@@ -1,3 +1,32 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 20% 20%, rgba(46, 169, 255, 0.12) 0%, rgba(4, 8, 20, 0.94) 38%, rgba(3, 6, 18, 1) 100%);
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(160deg, rgba(3, 9, 23, 0.96) 0%, rgba(9, 16, 34, 0.72) 52%, rgba(4, 7, 18, 0.95) 100%);
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  backdrop-filter: blur(6px);
+}
+
+.app-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 /* From Uiverse.io by andrew-demchenk0 */ 
 .pyramid-loader {
     position: relative;
